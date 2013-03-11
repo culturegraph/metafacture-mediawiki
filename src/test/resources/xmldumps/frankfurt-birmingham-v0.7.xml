@@ -1,0 +1,99 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="de">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <base>http://de.wikipedia.org/wiki/Wikipedia:Hauptseite</base>
+    <generator>MediaWiki 1.20wmf6</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Medium</namespace>
+      <namespace key="-1" case="first-letter">Spezial</namespace>
+      <namespace key="0" case="first-letter"/>
+      <namespace key="1" case="first-letter">Diskussion</namespace>
+      <namespace key="2" case="first-letter">Benutzer</namespace>
+      <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
+      <namespace key="4" case="first-letter">Wikipedia</namespace>
+      <namespace key="5" case="first-letter">Wikipedia Diskussion</namespace>
+      <namespace key="6" case="first-letter">Datei</namespace>
+      <namespace key="7" case="first-letter">Datei Diskussion</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Diskussion</namespace>
+      <namespace key="10" case="first-letter">Vorlage</namespace>
+      <namespace key="11" case="first-letter">Vorlage Diskussion</namespace>
+      <namespace key="12" case="first-letter">Hilfe</namespace>
+      <namespace key="13" case="first-letter">Hilfe Diskussion</namespace>
+      <namespace key="14" case="first-letter">Kategorie</namespace>
+      <namespace key="15" case="first-letter">Kategorie Diskussion</namespace>
+      <namespace key="100" case="first-letter">Portal</namespace>
+      <namespace key="101" case="first-letter">Portal Diskussion</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Birmingham</title>
+    <ns>0</ns>
+    <id>57252</id>
+    <revision>
+      <id>105226552</id>
+      <parentid>105093516</parentid>
+      <timestamp>2012-07-05T18:49:34Z</timestamp>
+      <contributor>
+        <username>EmausBot</username>
+        <id>901616</id>
+      </contributor>
+      <minor/>
+      <comment>r2.7.3) (Bot: Ergänze: [[my:ဘာမင်ဂမ်မြို့]]</comment>
+      <sha1>os6c1w9jpw4fbotlsixk9wnonogqiz5</sha1>
+      <text xml:space="preserve" bytes="25196">Wikitext Birmingham</text>
+    </revision>
+  </page>
+  <page>
+    <title>Diskussion:Birmingham</title>
+    <ns>1</ns>
+    <id>5091281</id>
+    <revision>
+      <id>89280080</id>
+      <parentid>89279957</parentid>
+      <timestamp>2011-05-25T22:36:15Z</timestamp>
+      <contributor>
+        <username>UKGB</username>
+        <id>377351</id>
+      </contributor>
+      <minor/>
+      <comment>hat „[[Diskussion:Birmingham, Vereinigtes Königreich]]“ nach „[[Diskussion:Birmingham]]“ verschoben und dabei eine Weiterleitung überschrieben: was soll das denn werden?</comment>
+      <sha1>4i1zr62r2pnaf2s4or1384beoi4dm7v</sha1>
+      <text xml:space="preserve" bytes="471">Wikitext Diskussion:Birmingham</text>
+    </revision>
+  </page>  
+  <page>
+    <title>Frankfurt</title>
+    <ns>0</ns>
+    <id>306231</id>
+    <revision>
+      <id>102048201</id>
+      <parentid>99777447</parentid>
+      <timestamp>2012-04-14T17:44:14Z</timestamp>
+      <contributor>
+        <username>Krauterer</username>
+        <id>1051885</id>
+      </contributor>
+      <minor/>
+      <sha1>a2ddbz7f9f94al3u1b7az1gry0usibm</sha1>
+      <text xml:space="preserve" bytes="3846">Wikitext Frankfurt</text>
+    </revision>
+  </page>
+  <page>
+    <title>Diskussion:Frankfurt</title>
+    <ns>1</ns>
+    <id>43519</id>
+    <revision>
+      <id>66623242</id>
+      <parentid>66601732</parentid>
+      <timestamp>2009-11-09T22:48:43Z</timestamp>
+      <contributor>
+        <username>Jed</username>
+        <id>452</id>
+      </contributor>
+      <sha1>t4rjltjyiu1950uls7a2e6gxscspxv8</sha1>
+      <text xml:space="preserve" bytes="24283">Wikitext Diskussion:Frankfurt</text>
+    </revision>
+  </page>
+</mediawiki>

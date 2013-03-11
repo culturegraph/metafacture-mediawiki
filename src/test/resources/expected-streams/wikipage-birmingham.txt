@@ -1,0 +1,7 @@
+57252={
+	PAGE_ID='57252',
+	REVISION_ID='105226552',
+	URL='http://de.wikipedia.org/wiki/Birmingham',
+	PAGETITLE=Birmingham,
+	WIKITEXT='Wikitext Birmingham'
+}

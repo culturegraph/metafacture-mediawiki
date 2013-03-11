@@ -1,0 +1,384 @@
+{{Begriffsklärungshinweis}}
+
+{{Infobox Ort im Vereinigten Königreich
+ | official_name = City of Birmingham
+ | local_name =             
+ | country = England
+ | region = [[West Midlands (Region){{!}}West Midlands]]
+ | region1 =             
+ | static_image = Birmingham (UK) skyline - Centenary Square 640.jpg
+ | static_image_caption = Skyline Birminghams
+ | area_footnotes =    
+ | area_total_sq_mi = 
+ | area_total_km2 = 267.77
+ | population = 1036878 
+ | population_date = 2010
+ | population_density = 
+ | os_grid_reference = SP066868
+ | iso_region = GB-BIR
+ | ons_code = 00CN
+ | latitude = 52/28/58.44/N
+ | longitude = 1/53/36.96/W
+ | scale =   
+ | post_town = 
+ | postcode_area = B
+ | postcode_district = B
+ | dial_code = 01905
+ | constituency_westminster =                 
+ | london_distance_mi = 
+ | douglas_distance =            
+ | shire_district =  
+ | shire_county = [[West Midlands (Metropolitan County)|West Midlands]]
+ | website = [http://www.birmingham.gov.uk/ www.birmingham.gov.uk]
+}}
+
+{| class="wikitable float-right"  style="font-size:95%; width:300px;"
+|-
+! colspan="2" style="background:#f99;"|Politik
+|- 
+| [[Oberbürgermeister]]: ||  Anita Ward (Lord Mayor) <ref>[http://www.birmingham.gov.uk/lordmayor lordmayor on birmingham.gov.uk]</ref>
+|- 
+| [[Stadtvertretung|Rat der Stadt]]:<br /><small>(120 Sitze)</small> || [[Conservative Party|Konservative]]: 43 Sitze<br />[[Labour Party|Labour]]: 42 Sitze<br />[[Liberal Democrats|LibDems]]: 32 Sitze<br />[[Respect – The Unity Coalition|Respect]]: 2 Sitze<br />Unabhängig: 1 Sitz
+|}
+
+[[Datei:Birmingham canals.jpg|thumb|Kanäle im Stadtteil Brindleyplace]]
+[[Datei:Birmingham newstreet.jpg|thumb|Die zentrale Einkaufsstraße New Street]]
+'''Birmingham''' ({{Audio-IPA|en-uk-Birmingham.ogg|ˈbɜːmɪŋˌəm}}, lokal [{{IPA|ˈbɜːmɪŋˌɡəm}}]) ist nach [[London]] die zweitgrößte Stadt des [[Vereinigtes Königreich|Vereinigten Königreichs]]. Sie ist das Zentrum der [[West Midlands (Region)|West Midlands]] und zählt knapp über 1 Million Einwohner, in ihrem Ballungsraum leben rund 2,6 Millionen Menschen.
+
+== Übersicht ==
+Die Stadt ist Zentrum der britischen [[Metalle|Metallverarbeitung]] und liegt östlich des „[[Black Country]]“ – benannt nach den rauchenden Schloten, welche die [[Industrielle Revolution]] hier konzentrierte. Sie hat sich aber längst –&nbsp;wie andere Städte der Region ([[Wolverhampton]], [[Dudley]] oder [[Coventry]])&nbsp;– zu einem modernen Dienstleistungszentrum mit futuristischen Hochhäusern gewandelt. Das [[Black Country Living Museum]], ein [[Freilichtmuseum]] in [[Dudley]] mit Original-Häusern und [[Handwerk]]sbetrieben vermittelt aber einen Eindruck vom früheren [[Alltag]].
+
+Birmingham wird oft ''Brum'' genannt (abgeleitet vom alten Namen Brummagem), dessen Einwohner ''Brummies''. Birmingham ist eine der ethnisch vielfältigsten Städte [[Vereinigtes Königreich|Großbritanniens]]. Ein großer Teil der Bevölkerung stammt aus der [[Karibik]], vom [[Indischer Subkontinent|indischen Subkontinent]] und aus [[Irland (Insel)|Irland]].
+Die mit Abstand größte ethnische Minderheit stellen die Pakistaner, mit etwa 150.000, vor allem aus dem von Pakistan kontrollierten Teil [[Kaschmir|Kaschmirs]]. Birmingham ist die Stadt, in der die meisten Kaschmiris außerhalb Kaschmirs leben. Sie sprechen fast ausschließlich Punjabi als Erstsprache. Laut der Volkszählung von 2001 gehören 29,7 % der Einwohner ethnischen Minderheiten an. In der Stadt leben die meisten [[Rastafari]]s außerhalb von [[Jamaika]] und hier findet die drittgrößte Parade zum [[St. Patrick's Day]] statt (nach [[Dublin]] und [[New York City|New York]]).
+
+Millionen von [[Fremdenverkehr|Touristen]] besuchen Birmingham jedes Jahr und die Stadt bietet nach dem [[West End (London)|West End]] in London die besten Einkaufsmöglichkeiten des Landes. Das einst von riesigen grauen Industrieanlagen geprägte Erscheinungsbild der Stadt wurde in den letzten Jahren merklich aufgefrischt und verschönert.
+
+Birmingham gehört zur Stadtgrafschaft [[West Midlands (Metropolitan County)|West Midlands]]. Nachbarstädte sind [[Solihull]] und [[Coventry]] im Osten sowie die zur Black Country gehörenden Metropolitan Counties [[Sandwell]], [[Dudley]], [[Walsall]] und [[Wolverhampton]] im Westen und Nordwesten.
+
+{{Klimatabelle	
+| TABELLE = deaktiviert
+| DIAGRAMM TEMPERATUR = rechts	
+| DIAGRAMM NIEDERSCHLAG = deaktiviert	
+| DIAGRAMM NIEDERSCHLAG HÖHE = 200	
+| QUELLE = [http://worldweather.wmo.int/010/c00028.htm WMO]
+| Überschrift = 	
+| Ort = 	 Birmingham
+<!-- durchschnittliche Höchsttemperatur für den jeweiligen Monat in °C -->	
+| hmjan = 	6.0
+| hmfeb = 	6.2
+| hmmär = 	8.9
+| hmapr = 	11.9
+| hmmai = 	15.3
+| hmjun = 	18.8
+| hmjul = 	20.6
+| hmaug = 	20.1
+| hmsep= 	17.6
+| hmokt = 	13.8
+| hmnov = 	9.2
+| hmdez = 	7.1
+<!-- durchschnittliche Niedrigsttemperatur für den jeweiligen Monat in °C -->		
+| lmjan = 	0.3
+| lmfeb = 	0.1
+| lmmär = 	1.5
+| lmapr = 	3.3
+| lmmai = 	6.0
+| lmjun = 	9.2
+| lmjul = 	11.1
+| lmaug = 	10.8
+| lmsep= 	8.8
+| lmokt = 	6.2
+| lmnov = 	2.9
+| lmdez = 	1.3
+<!-- durchschnittliche Niederschlagsmenge für den jeweiligen Monat in mm -->		
+| nbjan = 	56
+| nbfeb = 	48
+| nbmär = 	52
+| nbapr = 	48
+| nbmai = 	55
+| nbjun = 	57
+| nbjul = 	47
+| nbaug = 	67
+| nbsep= 	54
+| nbokt = 	53
+| nbnov = 	59
+| nbdez = 	66
+<!-- durchschnittliche Regentage für den jeweiligen Monat in d -->			
+| rdjan = 	16.7
+| rdfeb = 	12.8
+| rdmär = 	15.9
+| rdapr = 	14.1
+| rdmai = 	15.2
+| rdjun = 	12.6
+| rdjul = 	11.7
+| rdaug = 	13.5
+| rdsep= 	12.4
+| rdokt = 	13.4
+| rdnov = 	15.5
+| rddez = 	15.7
+}}
+
+== Geschichte ==
+=== Antike und frühes Mittelalter ===
+Kleine Bauerndörfer existierten bereits während der [[Bronzezeit]] in der Region um Birmingham. Zur Zeit der [[Römisches Reich|Römer]] führte eine wichtige Straße durch Birmingham und es existierte ein [[Römische Militärlager|römisches Lager]] in den heutigen südlichen Vororten. Es wurde auch eine kleine römische Siedlung ([[vicus]]) ausgegraben.
+
+Nach dem Rückzug der Römer war die Gegend um Birmingham nur sehr dünn besiedelt, da die schlechte Qualität des Bodens keine produktive [[Landwirtschaft]] zuließ. Das heutige Stadtgebiet war zum größten Teil bewaldet.
+
+Der Name Birmingham stammt vom [[Angelsachsen|angelsächsischen]] Beormaham (Dorf der Sippe von Beorma). Beorma war vermutlich ein lokaler Stammesführer. Später wurde daraus Brummagem und schließlich Birmingham. Im Bereich des Stadtteils Digbeth im Stadtzentrum zeigen heute Straßennamen wie Rea Street an, dass eine Siedlung an einer Furt durch den [[River Rea (Birmingham)|River Rea]] in diesem Bereich die Keimzelle Birminghams war.
+
+=== Mittelalter ===
+Nach der Eroberung [[England]]s durch die [[Normannen]] wurde die Gegend ein Lehen der Familie ''de Birmingham'', die dort eine kleine Bauernsiedlung errichten ließen. Im [[Domesday Book]] wird Birmingham als relativ unwichtiges Dorf mit einem Wert von nur gerade 20 Shilling erwähnt.
+
+Im Jahre 1154 erhielt der Lehnsherr Peter de Birmingham das Recht, [[Markt|Märkte]] durchzuführen. Der Markt, der Bull Ring genannt wurde, ermöglichte den Aufstieg von einem winzigen, unbedeutenden Bauerndorf zu einem wohlhabenden Handelszentrum. Um 1300 war Birmingham bereits die drittgrößte Siedlung in der Grafschaft [[Warwickshire]], hinter [[Coventry]] und [[Warwick]]. Die Familie de Birmingham kontrollierte die Gegend bis 1527, als der [[Herzog]] von [[Northumberland]] das Lehen übernahm.
+
+=== Beginn der Industrialisierung ===
+Vom 15. Jahrhundert an wurde Birmingham das Zentrum zahlreicher metallverarbeitender Industrien sowie der Waffenherstellung ([[Schwert]]er und [[Gewehr]]e). Die Lage Birminghams im Landesinnern fern den Seehandelswegen bedeutete, dass Waren von hoher Qualität produziert werden mussten, um auf dem Exportmarkt überhaupt eine Chance zu haben. Der Name Birmingham war deshalb bald gleichbedeutend mit Qualität.
+
+Der Waffenhandel wurde vor allem durch den [[Englischer Bürgerkrieg|englischen Bürgerkrieg]] angekurbelt. 1642 wurde Birmingham von königlichen Truppen verwüstet. Aus diesem Grund schloss sich die Stadt der Sache der Parlamentarier an und lieferte Waffen an deren Armee. Nicht weniger als 15.000 Schwerter sollen für die Truppen von [[Oliver Cromwell]] produziert worden sein.
+
+=== Die industrielle Revolution ===
+Die gutausgebildeten Arbeitskräfte und die Tatsache, dass Birmingham nahe den [[Kohle]]feldern von [[Warwickshire]] und [[Staffordshire]] lag, hatten zur Folge, dass die Stadt rasch wuchs. Am Ende des 18. Jahrhunderts war Birmingham bereits die größte Stadt von Warwickshire.
+
+Um 1800 herum wurde ein weitverzweigtes Netz von [[Narrowboat]]-[[Kanal (Wasserbau)|Kanälen]] gebaut, welche das Wachstum noch weiter vorantrieben. In den 1830ern wurden [[Eisenbahn]]linien nach [[Liverpool]], [[Manchester]] und [[London]] gebaut. Birmingham New Street wurde einer der wichtigsten [[Bahnhof|Bahnhöfe]] des Landes.
+
+Um 1850 war Birmingham bereits die zweitgrößte Stadt des Landes. Birmingham erhielt den Übernamen "city of a thousand trades" wegen der riesigen Bandbreite von Gütern, die hier produziert wurden. Allerdings machten die vielen Industrieanlagen Birmingham zu einer grauen, ungesunden und unfreundlichen Stadt. 1896 erhielt Birmingham das [[Stadtrecht]]. Zwischen 1889 und 1911 wurden die Vorstädte Aston, Edgbaston, Erdington, Handsworth, Kings Norton, Northfield und Yardley eingemeindet.
+
+=== 20. Jahrhundert ===
+[[Datei:Victoria Square, Birmingham at dusk.jpg|miniatur|Rathaus von Birmingham]]
+Während des [[Erster Weltkrieg|Ersten]] und [[Zweiter Weltkrieg|Zweiten Weltkriegs]] wurde in Birmingham vielfältige Rüstungsgüter hergestellt: Munition, Panzerfederungen, Stahlhelme und Minen. Auch Jagd- und Bomberflugzeuge wurden gebaut ([[Hawker Hurricane]], [[Avro Lancaster]], [[Supermarine Spitfire]]).
+
+Die Stadt erlitt während des Zweiten Weltkriegs große Zerstörungen durch Bombardierungen der deutschen [[Luftwaffe (Wehrmacht)|Luftwaffe]]. Über 5.000 Menschen wurden getötet und über 6.000 Häuser zerstört.
+
+Nach Kriegsende wurden viele der heruntergekommenen Arbeiterviertel abgerissen, da sie sich teilweise zu [[Slum]]s entwickelt hatten. Große Teile der Stadt mitsamt dem Stadtzentrum wurden neu gebaut. Nach einer Kommunalreform im Jahre 1974 wurde die Vorstadt [[Sutton Coldfield]] eingemeindet und Birmingham wurde eine [[kreisfreie Stadt]].
+
+Ab 1950 setzte eine große Einwanderungswelle ein. Viele Menschen aus den [[Commonwealth]]-Staaten zogen nach Birmingham und in die nähere Umgebung. Ab 1980 kam ein zweiter Einwanderungsschub, diesmal von Menschen aus dem [[Kosovo]] und aus [[Somalia]]. Auseinandersetzungen zwischen Minderheiten und der Polizei führten 1985 zu heftigen Rassenunruhen. Im Jahre 2001 gehörten 29,7 % der Bevölkerung ethnischen Minderheiten an, davon 10,6 % aus [[Pakistan]], 6,1 % aus der [[Karibik]] und 5,7 % aus [[Indien]]. 
+
+Seit den 70er-Jahren wandelt sich Birmingham von einer Industrie- zu einer Dienstleistungsstadt. Sinnbild dieser urbanistischen Erneuerung ist unter anderem [[Brindleyplace]]. Neben dem Flughafen wurde das National Exhibition Centre gebaut, das größte [[Messe (Wirtschaft)|Messegelände]] des Landes. Interessant hierbei ist, dass sowohl Flughafen als auch Messe eigentlich gar nicht zu Birmingham gehören, sondern zur Nachbarstadt [[Solihull]]. 1998 fand in Birmingham ein [[Gruppe der Acht|G8]]-Gipfel statt. 1999 fand hier der außerdem weltweite [[IUGG]]-Kongress statt. Birmingham kandidierte erfolglos als [[europäische Kulturhauptstadt]] 2008.
+
+=== Entwicklung der Einwohnerzahl ===
+:1550: 1.500
+:1650: 5.000
+:1750: 24.000
+:1800: 80.000
+:1900: 522.800
+:1981: 1.013.431
+:2002: 990.000
+:2005: 1.001.200
+:2009: 1.012.010
+:2010: 1.036.900
+
+== Wirtschaft ==
+Zur Zeit der Industriellen Revolution blühten Birmingham und die umliegenden Gebiete auf. In den Fabriken wurden Schwerter, Kanonen, Pistolen, Uhren, Schmuck, Eisenbahnwaggons und Dampfmaschinen hergestellt. Obwohl Birmingham über 100 Kilometer vom Meer entfernt liegt, wurden hier sogar Schiffe hergestellt; die vorfabrizierten Einzelteile wurden dann an der Küste zusammengesetzt.
+
+1836 wurde die erste Filiale der [[Midland Bank]] eröffnet. Sie war eine der größten Banken des Landes und gehört heute zum [[HSBC]]-Konzern. Bis 2003 wurden in der Birmingham Mint, der ältesten unabhängigen [[Münze|Münzprägestätte]] der Welt, Münzen hergestellt. Birmingham ist ein Zentrum der Bier- und Schokoladenindustrie. Bis zum Konkurs der [[MG Rover Group]] im Jahr 2005 wurden im Stadtteil Longbridge Wagen der Marke MG und Rover produziert.
+
+Obwohl die Industrie noch immer eine wichtige Rolle einnimmt, wird ihre einstige Bedeutung vom Dienstleistungssektor langsam aber sicher übertroffen; auch der Finanzsektor und der Tourismus werden immer wichtiger.
+
+== Verkehr ==
+Der [[Hauptbahnhof]] von Birmingham, [[Bahnhof Birmingham New Street|New Street]], gilt als größter [[Eisenbahn]]knotenpunkt Großbritanniens. Züge verkehren in alle wichtigen Städte des Landes. New Street wird von den Bahngesellschaften [[Arriva Trains Wales]] (Regionalverkehr Richtung Wales), [[CrossCountry]], [[London Midland]] (Regionalverkehr, überregionaler Verkehr) und [[Virgin Trains]] (Fernverkehr Richtung Norden und  Süden, insbesondere London) bedient. [[Chiltern Railways]] (Regionalverkehr von London) fährt New Street nicht an, bedient aber unter anderem die nahegelegenen Bahnhöfe [[Bahnhof Birmingham Snow Hill|Snow Hill]] und [[Bahnhof Birmingham Moor Street|Moor Street]].
+
+Die [[Midland Metro]] ist eine [[Straßenbahn]], welche Birmingham mit den Nachbarstädten [[Wednesbury]], [[West Bromwich]] und [[Wolverhampton]] verbindet. Erweiterungen ins Stadtzentrum und nach [[Dudley]] sind geplant. Der städtische Busverkehr ist weitgehend dereguliert.
+
+Birmingham ist der Knotenpunkt verschiedener [[Autobahn]]en. Die Stadt wird von einem „Autobahnring“ geschlossen; die jeweiligen Abschnitte sind der [[Motorway M42]] an der Süd- und Ostseite, [[Motorway M6]] an der Nordseite und [[Motorway M5]] an der Westseite. Das [[Gravelly Hill Interchange|Autobahnkreuz Gravelly Hill]] nordöstlich der Stadt wird wegen seiner Kompliziertheit scherzhaft "Spaghetti Junction" genannt. Von dieser führt stadteinwärts der [[Motorway A38(M)]], eine siebenstreifige Autobahn ohne Mittelstreifen. 2003 wurde nördlich von Birmingham die erste mautpflichtige Autobahn Großbritanniens, der [[Motorway M6 Toll]] eröffnet, die Birmingham zusammen mit der umliegenden Agglomeration umgeht.
+
+Im Osten der Stadt liegt der Flughafen [[Flughafen Birmingham International|Birmingham International]], mit Flügen nach ganz Europa sowie nach New York. Der Flughafen ist an das Eisenbahnnetz angeschlossen.
+
+Obwohl keine bedeutenden Flüsse durch Birmingham fließen, ist die Stadt der Knotenpunkt des mittelenglischen [[Narrowboat]]-[[Kanal (Wasserbau)|Kanalsystems]]. Innerhalb der Stadtgrenzen gibt es Kanäle mit einer Gesamtlänge von 60 Kilometern. Es wird oft behauptet, dass Birmingham mehr Kanäle als [[Venedig]] besitzt (allerdings ist die Stadtfläche auch um einiges größer). Viele Kanäle waren mit der Zeit unpassierbar geworden, werden jedoch seit den 1980er-Jahren wieder instandgesetzt und sind heute beliebte Touristenattraktionen mit zahlreichen Bars und Restaurants.
+
+== Sport ==
+In Birmingham spielen zwei der ältesten und renommiertesten Fußballclubs der [[Premier League]], [[Aston Villa]] (gegründet 1874) und [[Birmingham City]] (gegründet 1875). Der Club [[West Bromwich Albion]] stammt aus einem Vorort. Die erste professionelle Fußballliga Englands wurde am 22. März 1885 im Vorort Aston gegründet.
+
+Birmingham ist auch Zentrum der britischen [[Leichtathletik]]. 2003 wurden hier die Hallen-Weltmeisterschaften durchgeführt. Birmingham hat 2007 die Hallen-Europameisterschaften ausgerichtet. Weitere beliebte Sportarten sind [[Golf (Sport)|Golf]], [[Rugby]], [[Basketball]], [[Boxen]], [[Cricket]], [[Feldhockey]] und [[Badminton]].
+
+Die [[Birmingham Bulls (Footballteam)|Birmingham Bulls]] sind einer der ältesten englischen [[American Football|American-Football-Vereine]] und vierfacher britischer Meister.
+
+[[Snookerweltmeisterschaft 1927|1927]] fand in der ''Camkin's Hall'' das Finale der ersten [[Snookerweltmeisterschaft]] statt. Organisiert wurde sie von Bill Camkin und dem späteren ersten Weltmeister [[Joe Davis (Billardspieler)|Joe Davis]].
+
+== Kultur ==
+=== Rock- und Popmusik ===
+In den späten 1960er-Jahren entwickelte sich in Birmingham der [[Heavy Metal]], mit Bands wie [[Black Sabbath]], [[Judas Priest]], [[Magnum (Band)|Magnum]], [[The Fortunes]], [[The Move]]. Auch [[Robert Plant]], der Sänger von [[Led Zeppelin]], stammt aus Birmingham.
+
+Die Firma [[Bradmatic]] mit Sitz in Birmingham entwickelte und stellte das [[Mellotron]] her, einen der ersten brauchbaren [[Synthesizer]], der einen bedeutenden Einfluss auf die Rockmusik jener Zeit ausübte.
+
+In Birmingham begannen zahlreiche Blues- und Progressive-Rock-Bands ihre Karriere, unter anderem [[Spencer Davis Group|The Spencer Davis Group]], [[The Moody Blues]], [[Judas Priest]], [[Traffic (Band)|Traffic]] und [[Electric Light Orchestra]].
+
+Auch diverse bekannte Sänger und Songwriter stammen aus Birmingham oder begannen dort ihre Karriere, darunter [[Steve Winwood]], [[Carl Palmer]] (von [[Emerson, Lake and Palmer]]), [[Phil Lynott]] (von [[Thin Lizzy]]), [[Jeff Lynne]], [[Ozzy Osbourne]] oder [[Joan Armatrading]].
+
+Nach der Einwanderungswelle aus den Karibikstaaten in den 1970ern wurde die [[Reggae]]-Musik immer bedeutender; die bekanntesten Vertreter sind [[UB40]] und [[Steel Pulse]].
+
+In den 1980ern wurden weitere Bands aus Birmingham weltbekannt, wie [[Duran Duran]] oder [[Dexys Midnight Runners]].
+
+In den 1990ern wurde Birmingham Zentrum des britischen [[Hip-Hop (Musik)|Hip-Hop]], des [[House]] und des von indischen Elementen beeinflussten [[Bhangra]].
+
+Beliebte Veranstaltungsorte für Pop- und Rockkonzerte sind die [[NEC Arena]] und die [[National Indoor Arena]].
+
+In der National Indoor Arena wurde der [[Eurovision Song Contest 1998]] ausgetragen.
+
+=== Klassische Musik ===
+Birmingham besitzt zwei bekannte klassische Institutionen, das [[City of Birmingham Symphony Orchestra]] (CBSO) und das Birmingham Royal Ballet. Beim CBSO wirkte [[Simon Rattle]] als Dirigent und Leiter seit 1980 bis 1998, als er aufgrund der schlechten finanziellen Ausstattung des Orchesters seinen Vertrag nicht mehr verlängern wollte.
+Von 1784 bis 1912 fand das ''Birmingham Triennal Music Festival'' statt, welches damals als das beste Musikfestival Großbritanniens galt. Berühmte Komponisten wie [[Felix Mendelssohn Bartholdy|Mendelssohn]] und [[Antonín Dvořák|Dvořák]] schrieben eigens für dieses Festival neue Kompositionen.
+
+=== Literatur ===
+Einige berühmte Schriftsteller lebten und schrieben in Birmingham:
+
+* [[Arthur Conan Doyle]], der Autor der [[Sherlock Holmes|Sherlock-Holmes]]-Romane lebte einst im Vorort Aston
+* Die für ihre Trivialromane bekannte [[Barbara Cartland]], auch ''The Lady in Pink'' genannt, wurde im Vorort Edgbaston geboren
+* [[J. R. R. Tolkien]], der Autor des Fantasy-Romans ''[[Der Herr der Ringe]]'', verbrachte den größten Teil seiner Kindheit in Birmingham und Umgebung
+
+=== Kultur allgemein ===
+
+[[Datei:The Rotunda, Birmingham.jpg|thumb|Das Hochhaus ''Rotunda'' vor der Renovierung 2006–2007]]
+[[Datei:Birmingham Selfridges building.jpg|thumb|Selfridge-Bau]]
+
+Birmingham besitzt zahlreiche [[Theater]] und [[Kunstmuseum|Kunstmuseen]]. Die Stadt übernahm auch eine Pionierrolle in der [[Graffiti]]- und Hip-Hop-Kultur. Hier finden zahlreiche kulturelle Großveranstaltungen statt, zum Beispiel die drittgrößte Parade der Welt zum St. Patrick’s Day (nach Dublin und New York), die Militärshow Birmingham Tattoo oder das Birmingham Film Festival.
+
+Zu Weihnachten findet ein [[Frankfurt am Main|Frankfurter Markt]] in der Stadtmitte statt. Dort wird zum Beispiel [[Deutsche Küche]] verkauft, sowie Deutsche Kunstwerke, Schmuck, Kleider usw.
+
+== Sehenswürdigkeiten ==
+* Birmingham Museum & Art Gallery
+* Birmingham Botanical Gardens
+* The Barber Institute of Fine Arts – Kunstmuseum mit Werken von [[Vincent van Gogh|Van Gogh]], [[Auguste Rodin|Rodin]], [[Pablo Picasso|Picasso]] und [[Claude Monet|Monet]]
+* New Street Station – einer der größten Bahnhöfe Großbritanniens
+* Rotunda – zylinderförmiges Bürohochhaus
+* Brindleyplace und Millennium Point – zwei Beispiele einer erfolgreichen Stadtteilsanierung
+* Chinese Quarter – im Chinesen-Viertel pulsiert heute das Nachtleben
+* [[Sea Life Centre|National Sealife Centre]] – riesiges Süß- und Meerwasseraquarium
+* Birmingham Thinktank – Technik-Museum, darin wird zum Beispiel die älteste noch funktionierende [[Dampfmaschine]] gezeigt (Jahrgang 1779, gebaut von [[James Watt]])
+* Jewellery Quarter –&nbsp;die größte Häufung von Juweliergeschäften und Schmuckherstellern in Europa&nbsp;– mit dem Museum of the Jewellery Quarter, einem Ankerpunkt der [[Europäische Route der Industriekultur|Europäischen Route der Industriekultur]] (ERIH)
+* Bullring - neues Einkaufszentrum in der Innenstadt von Birmingham; erbaut, nachdem das alte Bullring 2001 abgerissen worden war 
+* Selfridge-Kaufhaus – modernes Kaufhaus in geschwungener Form, welches vollständig mit 60 Zentimeter großen Aluminiumscheiben verkleidet ist.
+* [[St Paul's Square (Birmingham)]]
+
+== Bildung ==
+Birmingham besitzt drei [[Universität]]en: die [[University of Birmingham]], die [[Aston University]] und die [[Birmingham City University]] (früher ''University of Central England'', davor ''Birmingham Polytechnic''). Die beiden letztgenannten planten eine Fusion, Aston stimmte jedoch letzten Endes dagegen. Das vor 100 Jahren gegründete [[Birmingham Conservatoire]] von Birmingham ist eines der renommiertesten [[Konservatorium|Konservatorien]] des Landes.
+
+== Persönlichkeiten ==
+→ ''Hauptartikel: [[Liste von Persönlichkeiten der Stadt Birmingham]]''
+
+== Partnerstädte ==
+
+* {{FRA|#}} [[Lyon]], Frankreich
+* {{DEU|#}} [[Frankfurt am Main]], Deutschland
+* {{DEU|#}} [[Leipzig]], Deutschland
+* {{ITA|#}} [[Mailand]], Italien
+* {{RSA|#}}[[Johannesburg]], Südafrika 
+* {{IND|#}} [[Amritsar]], Indien
+* {{USA|#}} [[Chicago]], USA
+* {{CHN|#}} [[Guangzhou]], China 
+* {{CHN|#}} [[Nanjing]], China
+
+== Weblinks ==
+{{Commonscat|Birmingham}}
+* [http://www.christmasinbirmingham.com/ Stadtverwaltung]
+* {{dmoz|Regional/Europe/United_Kingdom/England/West_Midlands/Birmingham/|Birmingham}}
+* {{SWD|4006934-5}}
+
+== Einzelnachweise ==
+<references />
+
+{{Navigationsleiste Districts in West Midlands}}
+
+[[Kategorie:Birmingham| ]]
+[[Kategorie:Ort in West Midlands (Metropolitan County)]]
+[[Kategorie:City (England)]]
+[[Kategorie:Millionenstadt]]
+
+{{Link GA|en}}
+
+[[af:Birmingham]]
+[[am:በርሚንግሃም]]
+[[an:Birmingham]]
+[[ar:برمينغهام]]
+[[ay:Birmingham]]
+[[az:Birmingem]]
+[[bat-smg:Bėrmėngams]]
+[[be:Горад Бірмінгем]]
+[[be-x-old:Бірмінггэм]]
+[[bg:Бирмингам]]
+[[br:Birmingham]]
+[[bs:Birmingham]]
+[[ca:Birmingham]]
+[[ckb:بێرمینگهام]]
+[[co:Birmingham]]
+[[cs:Birmingham]]
+[[cv:Бирмингем]]
+[[cy:Birmingham]]
+[[da:Birmingham]]
+[[diq:Birmingham]]
+[[el:Μπέρμιγχαμ]]
+[[en:Birmingham]]
+[[eo:Birmingham]]
+[[es:Birmingham]]
+[[et:Birmingham]]
+[[eu:Birmingham]]
+[[fa:بیرمنگام]]
+[[fi:Birmingham]]
+[[fo:Birmingham]]
+[[fr:Birmingham]]
+[[fy:Birmingham]]
+[[ga:Birmingham]]
+[[gd:Birmingham]]
+[[gl:Birmingham]]
+[[gn:Birmingham]]
+[[gu:બર્મિંગહામ]]
+[[gv:Birmingham]]
+[[he:ברמינגהאם]]
+[[hi:बर्मिंघम]]
+[[hr:Birmingham]]
+[[hsb:Birmingham]]
+[[hu:Birmingham]]
+[[hy:Բիրմինգհեմ]]
+[[id:Birmingham]]
+[[io:Birmingham]]
+[[is:Birmingham]]
+[[it:Birmingham]]
+[[ja:バーミンガム]]
+[[ka:ბირმინგემი]]
+[[kn:ಬರ್ಮಿಂಗ್ಹ್ಯಾಮ್]]
+[[ko:버밍엄]]
+[[la:Birminghamia]]
+[[lt:Birmingamas]]
+[[lv:Birmingema]]
+[[mk:Бирмингем]]
+[[mr:बर्मिंगहॅम]]
+[[ms:Birmingham]]
+[[my:ဘာမင်ဂမ်မြို့]]
+[[nl:Birmingham (Engeland)]]
+[[nn:Birmingham]]
+[[no:Birmingham]]
+[[nov:Birmingham]]
+[[oc:Birmingham]]
+[[os:Бирмингем]]
+[[pl:Birmingham]]
+[[pms:Birmingham]]
+[[pnb:برمنگم]]
+[[pt:Birmingham]]
+[[qu:Birmingham]]
+[[ro:Birmingham]]
+[[roa-rup:Birmingham]]
+[[ru:Бирмингем]]
+[[sa:बर्मिङ्घम्]]
+[[scn:Birmingham]]
+[[sco:Birmingham]]
+[[sh:Birmingham]]
+[[simple:Birmingham]]
+[[sk:Birmingham]]
+[[sl:Birmingham]]
+[[so:Birmingham]]
+[[sr:Бирмингем]]
+[[stq:Birmingham]]
+[[sv:Birmingham]]
+[[sw:Birmingham]]
+[[ta:பர்மிங்காம் (ஐக்கிய இராச்சியம்)]]
+[[te:బర్మింగ్‌హామ్]]
+[[th:เบอร์มิงแฮม]]
+[[tl:Birmingham]]
+[[tr:Birmingham]]
+[[ug:Birmin'gxam]]
+[[uk:Бірмінгем]]
+[[vi:Birmingham]]
+[[vo:Birmingham]]
+[[war:Birmingham]]
+[[yi:בירמינגהאם]]
+[[zh:伯明翰]]
+[[zh-min-nan:Birmingham]]
+[[zh-yue:伯明翰]]

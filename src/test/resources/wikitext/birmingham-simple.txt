@@ -1,0 +1,19 @@
+{{Begriffsklärungshinweis}}
+
+{{Infobox Ort im Vereinigten Königreich
+ | official_name = City of Birmingham
+ | local_name =             
+ | country = England
+ | population = 1036878 
+ | shire_county = [[West Midlands (Metropolitan County)|West Midlands]]
+ | website = [http://www.birmingham.gov.uk/ www.birmingham.gov.uk]
+}}
+
+{{Klimatabelle	
+| TABELLE = deaktiviert
+| DIAGRAMM TEMPERATUR = rechts	
+| DIAGRAMM NIEDERSCHLAG = deaktiviert	
+| DIAGRAMM NIEDERSCHLAG HÖHE = 200	
+}}
+
+Birmingham gehört zur Stadtgrafschaft [[West Midlands (Metropolitan County)|West Midlands]]. Nachbarstädte sind [[Solihull]] und [[Coventry]] im Osten sowie die zur Black Country gehörenden Metropolitan Counties [[Sandwell]], [[Dudley]], [[Walsall]] und [[Wolverhampton]] im Westen und Nordwesten.
