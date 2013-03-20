@@ -5,7 +5,7 @@ jdk:
 env:
   global:
     - SONATYPE_USERNAME=culturegraph
-    - secure: "ZoamRwxNXtJKfNXWmDTKhmTRuxaKvBd2M/7BBSXSq6egKDkXcioBkkT31PjOH3RdDPBql9BgIvXAqvoV2XQeZpNss/Ywet8l2m6bFrnUcGAZttFg7V52vEnOAQNGzPfVW0ABBeLngazOIQMSiUWDPs3DI3jcM3BP8+9eildl8kg="
+    - secure: "SUVokr6x5uqPnSBgtc/5AqN2ZKXhbW5/lIt0UQ3agVXH6nGuINdgZ3mNN0v2VrzxXpc0NUldwrDqfwY9r1JJZFq4jX+6iVRQ3b8e5efGKO+eEFAPna48Z5UE6RgGjHEnY7h7m/ptQoLouR514Z31ZUTQpq7vTyGSNZyEOvBZOQ4="
     
 after_success:
   - python travis-ci/configure-mvn.py
