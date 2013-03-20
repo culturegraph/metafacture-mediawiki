@@ -9,4 +9,4 @@ env:
     
 after_success:
   - python travis-ci/configure-mvn.py
-  - mvn clean deploy --settings ~/.m2/mySettings.xml
+  - mvn clean deploy --settings ~/.m2/mySettings.xml -Dgpg.skip=true -Psonatype-oss-release
