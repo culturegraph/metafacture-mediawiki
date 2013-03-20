@@ -15,21 +15,6 @@
 		</license>
 	</licenses>
 	
-	
-	<distributionManagement>
-		<repository>
-			<id>sonatype-nexus-staging</id>
-			<name>Sonatype OSS Maven Repository : Releases</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-		<snapshotRepository>
-			<id>sonatype-nexus-snapshots</id>
-			<name>Sonatype OSS Maven Repository : Snapshots</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-			<!-- <uniqueVersion>true</uniqueVersion> -->
-		</snapshotRepository>
-	</distributionManagement>
-
 	<scm>
 		<url>http://github.com/culturegraph/metafacture-mediawiki</url>
 		<connection>scm:git:git://github.com/culturegraph/metafacture-mediawiki.git</connection>
@@ -100,14 +85,6 @@
 									<exclude>org.culturegraph:metafacture-core</exclude>
 								</excludes>
 							</artifactSet>
-							<!-- filters>
-								<filter>
-									<artifact>org.culturegraph:metafacture-core</artifact>
-									<excludes>
-										<exclude>**</exclude>
-									</excludes>
-								</filter>
-							</filters -->
 						</configuration>
 					</execution>
 				</executions>

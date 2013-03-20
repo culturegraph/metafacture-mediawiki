@@ -1,3 +1,12 @@
 language: java
 jdk:
   - openjdk6
+
+env:
+  global:
+    - SONATYPE_USERNAME=culturegraph
+    - secure: "ZoamRwxNXtJKfNXWmDTKhmTRuxaKvBd2M/7BBSXSq6egKDkXcioBkkT31PjOH3RdDPBql9BgIvXAqvoV2XQeZpNss/Ywet8l2m6bFrnUcGAZttFg7V52vEnOAQNGzPfVW0ABBeLngazOIQMSiUWDPs3DI3jcM3BP8+9eildl8kg="
+    
+after_success:
+  - python travis-ci/configure-mvn.py
+  - mvn clean deploy --settings ~/.m2/mySettings.xml
