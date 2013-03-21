@@ -10,7 +10,7 @@ Metafacture-Mediawiki is a plugin for [Metafacture](https://github.com/culturegr
 
 ### Key Features
 
-* Extracts metadata information about pages from MediaWiki xml documents
+* Extracts basic metadata information about pages from MediaWiki xml documents
 * Extracts simple information from wikitext using regular expressions (fast but not suitable for complex tasks)
 * Wraps the excellent [Sweble wikitext parser](http://sweble.org/) for conveniently parsing wikitext into an abstract syntax tree within a [Flux](https://github.com/culturegraph/metafacture-core/wiki#flux) flow
 * Extracts links and templates from abstract syntax trees created by [Sweble](http://sweble.org/) and turns them into a Metafacture event stream
