@@ -8,11 +8,13 @@ Data extraction from MediaWiki pages made easy.
 
 Metafacture-Mediawiki is a plugin for [Metafacture](https://github.com/culturegraph/metafacture-core). It provides modules for extracting information from MediaWiki pages such as Wikipedia articles. Currently, modules for extracting links and templates exist. Adding new extraction modules is easy.
 
+The plugin relies on the excellent [Sweble wikitext parser](http://sweble.org/) for parsing wikitext into abstract syntax trees.
+
 ### Key Features
 
 * Extracts basic metadata information about pages from MediaWiki xml documents
 * Extracts simple information from wikitext using regular expressions (fast but not suitable for complex tasks)
-* Wraps the excellent [Sweble wikitext parser](http://sweble.org/) for conveniently parsing wikitext into an abstract syntax tree within a [Flux](https://github.com/culturegraph/metafacture-core/wiki#flux) flow
+* Wraps the [Sweble wikitext parser](http://sweble.org/) for conveniently parsing wikitext into an abstract syntax tree within a [Flux](https://github.com/culturegraph/metafacture-core/wiki#flux) flow
 * Extracts links and templates from abstract syntax trees created by [Sweble](http://sweble.org/) and turns them into a Metafacture event stream
 * Makes writing additional extraction modules easy
 * Supports running multiple extraction modules hassle-free
