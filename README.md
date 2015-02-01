@@ -52,7 +52,7 @@ Development snapshots are distributed via [Sonatype OSS](http://oss.sonatype.org
     <dependency>
         <groupId>org.culturegraph</groupId>
         <artifactId>metafacture-mediawiki</artifactId>
-        <version>0.0.0-SNAPSHOT</version>
+        <version>3.0.0-SNAPSHOT</version>
     </dependency>
 </dependencies>
 ```

@@ -17,12 +17,12 @@ package org.culturegraph.mf.mediawiki.example;
 
 import java.io.IOException;
 
+import org.culturegraph.mf.formeta.formatter.FormatterStyle;
 import org.culturegraph.mf.mediawiki.analyzer.TemplateExtractor;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.converter.xml.WikiXmlHandler;
 import org.culturegraph.mf.stream.converter.FormetaEncoder;
-import org.culturegraph.mf.stream.converter.FormetaEncoder.Style;
 import org.culturegraph.mf.stream.converter.MapToStream;
 import org.culturegraph.mf.stream.converter.xml.XmlDecoder;
 import org.culturegraph.mf.stream.sink.Histogram;
@@ -71,7 +71,7 @@ public final class CountTemplates {
 
 		final MapToStream mapToStream = new MapToStream();
 		final FormetaEncoder encoder = new FormetaEncoder();
-		encoder.setStyle(Style.MULTILINE);
+		encoder.setStyle(FormatterStyle.MULTILINE);
 		final ObjectStdoutWriter<String> writer = new ObjectStdoutWriter<String>();
 
 		mapToStream
