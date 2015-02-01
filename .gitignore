@@ -1,8 +1,11 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
+# Ignore Maven traget directory:
 /target
+
+# Ignore Eclipse project files:
+.checkstyle
+.pmd
+.eclipse-pmd
+.classpath
+.project
+.settings/
+
