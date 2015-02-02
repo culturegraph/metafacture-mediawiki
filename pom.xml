@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.culturegraph</groupId>
 	<artifactId>metafacture-mediawiki</artifactId>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.0.0</version>
 	<name>metafacture-mediawiki</name>
 	<description>Provides Metafacture modules and auxiliary classes for processing wiki pages from Mediawikis such as Wikipedia</description>
 	<url>http://github.com/culturegraph/metafacture-mediawiki</url>
@@ -34,7 +34,7 @@
 		<url>http://github.com/culturegraph/metafacture-mediawiki</url>
 		<connection>scm:git:git://github.com/culturegraph/metafacture-mediawiki.git</connection>
 		<developerConnection>scm:git:git@github.com:culturegraph/metafacture-mediawiki.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>metafacture-mediawiki-3.0.0</tag>
 	</scm>
 
 	<issueManagement>
