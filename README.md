@@ -25,37 +25,31 @@ Metafacture-Mediawiki can be used as a plugin in the Metafacture distribution or
 
 ### Plugin Usage
 
-_The Metafacture-Mediawiki plugin will soon be available for download on the [Culturegraph Software Website](http://culturegraph.github.com)_
+The plugin can be downloaded on the [releases](https://github.com/culturegraph/metafacture-mediawiki/releases) page. Drop this plugin jar into the `/plugins` folder of the [metafacture-runner](https://github.com/culturegraph/metafacture-runner) to use the plugin.
 
 ### Java Library Usage
 
-_Metafacture-Mediawiki release will soon be available on [Maven Central](http://search.maven.org/)_
-
-Development snapshots are distributed via [Sonatype OSS](http://oss.sonatype.org/). To use the snapshots add the Sonatype repository and the Metafacture-Mediawiki dependency to your project's POM:
+Metafacture-Mediawiki is available on [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.culturegraph%22). To use it, add the following dependency declaration to your pom.xml:
 
 ```xml
-<repositories>
-    <repository>
-        <id>sonatype-nexus-snapshots</id>
-        <name>Sonatype Nexus Snapshots</name>
-        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        <releases>
-            <enabled>false</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>
-</repositories>
-
-<dependencies>
-    <dependency>
-        <groupId>org.culturegraph</groupId>
-        <artifactId>metafacture-mediawiki</artifactId>
-        <version>3.0.0-SNAPSHOT</version>
-    </dependency>
-</dependencies>
+<dependency>
+    <groupId>org.culturegraph</groupId>
+    <artifactId>metafacture-mediawiki</artifactId>
+    <version>3.0.0</version>
+</dependency>
 ```
+
+Additionally, you need to add the metafacture-core package as a dependency:
+
+```xml
+<dependency>
+    <groupId>org.culturegraph</groupId>
+    <artifactId>metafacture-core</artifactId>
+    <version>3.0.0</version>
+</dependency>
+```
+
+Our integration server automatically publishes successful builds of the master branch as snapshot versions on [Sonatype OSS Repository](https://oss.sonatype.org/index.html#nexus-search;quick%7Eculturegraph).
 
 ## Documentation
 
@@ -63,6 +57,6 @@ The documentation of Metafacture-Mediawiki can be found in the [Wiki](https://gi
 
 ## License
 
-Copyright 2013 Deutsche Nationalbibliothek.
+Copyright 2013, 2015 Deutsche Nationalbibliothek.
 
 Metafacture-Mediawiki is distributed under the [Apache 2.0 License]( http://www.apache.org/licenses/LICENSE-2.0).
