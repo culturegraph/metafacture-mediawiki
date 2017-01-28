@@ -15,9 +15,9 @@
  */
 package org.culturegraph.mf.mediawiki.converter;
 
-import org.culturegraph.mf.exceptions.MetafactureException;
-import org.culturegraph.mf.framework.DefaultObjectPipe;
+import org.culturegraph.mf.framework.MetafactureException;
 import org.culturegraph.mf.framework.ObjectReceiver;
+import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 import org.sweble.wikitext.engine.CompiledPage;
 
@@ -26,7 +26,7 @@ import de.fau.cs.osr.ptk.common.json.JsonConverter;
 /**
  * Adds an AST to the [@link WikiPage} object by deserialising the
  * JSON representation in the {@link WikiPage} object.
- *  
+ *
  * @author Christoph Böhme
  */
 public final class JsonToAst extends

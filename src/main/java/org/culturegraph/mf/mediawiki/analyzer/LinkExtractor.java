@@ -15,11 +15,11 @@
  */
 package org.culturegraph.mf.mediawiki.analyzer;
 
-import org.culturegraph.mf.framework.DefaultObjectPipe;
 import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
+import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 import org.culturegraph.mf.mediawiki.util.TraverseTree;
@@ -28,20 +28,20 @@ import org.sweble.wikitext.lazy.parser.InternalLink;
 /**
  * Extracts all internal links from the wiki page and emit them
  * as literals with INTERNAL_LINK as name and the link target as
- * value. 
- * 
+ * value.
+ *
  * @author Christoph Böhme
  *
  */
 @Description("Extracts all internal links from a wiki page.")
 @In(WikiPage.class)
 @Out(StreamReceiver.class)
-public final class LinkExtractor 
+public final class LinkExtractor
 		extends DefaultObjectPipe<WikiPage, StreamReceiver>
 		implements Analyzer {
 
 	private static final String LITERAL_NAME = "INTERNAL_LINK";
-	
+
 	private final LinkVisitor visitor = new LinkVisitor();
 
 	@Override
@@ -70,7 +70,7 @@ public final class LinkExtractor
 		public void visit(final InternalLink node) {
 			getReceiver().literal(LITERAL_NAME, node.getTarget());
 		}
-		
+
 	}
 
 }

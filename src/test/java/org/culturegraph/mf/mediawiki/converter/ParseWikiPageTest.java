@@ -20,9 +20,9 @@ import static org.junit.Assert.assertNotNull;
 
 import java.io.IOException;
 
+import org.culturegraph.mf.commons.ResourceUtil;
+import org.culturegraph.mf.javaintegration.ObjectCollector;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.stream.pipe.ObjectBuffer;
-import org.culturegraph.mf.util.ResourceUtil;
 import org.junit.Test;
 
 /**
@@ -31,45 +31,40 @@ import org.junit.Test;
  */
 public final class ParseWikiPageTest {
 
-	private static final long PAGEID_BIRMINGHAM = 57252L;
-	private static final long REVISIONID_BIRMINGHAM = 105226552L;
-	private static final String URL_BIRMINGHAM = "http://de.wikipedia.org/wiki/Birmingham";
-	private static final String TITLE_BIRMINGHAM = "Birmingham";
-	private static final String WIKITEXT_FILE_BIRMINGHAM = "wikitext/birmingham.txt";
-
 	@Test
 	public void test() throws IOException {
-		
+
 		final WikiTextParser wikiPageParser = new WikiTextParser();
-		final ObjectBuffer<WikiPage> results = new ObjectBuffer<WikiPage>(); 
-		
+		final ObjectCollector<WikiPage> results = new ObjectCollector<>();
+
 		wikiPageParser.setReceiver(results);
-		
-		final String wikitextBirmingham = ResourceUtil.loadTextFile(WIKITEXT_FILE_BIRMINGHAM);
-		
+
+		final String wikitextBirmingham = ResourceUtil.loadTextFile(
+				"wikitext/birmingham.txt");
+
 		WikiPage page = new WikiPage();
-		page.setPageId(PAGEID_BIRMINGHAM);
-		page.setRevisionId(REVISIONID_BIRMINGHAM);
-		page.setUrl(URL_BIRMINGHAM);
-		page.setTitle(TITLE_BIRMINGHAM);
+		page.setPageId(57252L);
+		page.setRevisionId(105226552L);
+		page.setUrl("http://de.wikipedia.org/wiki/Birmingham");
+		page.setTitle("Birmingham");
 		page.setWikiText(wikitextBirmingham);
 		page.setWikiAst(null);
-		
+
 		wikiPageParser.process(page);
 		wikiPageParser.closeStream();
-		
+
 		page = results.pop();
 		assertNotNull(page);
-		assertEquals(PAGEID_BIRMINGHAM, page.getPageId());
-		assertEquals(REVISIONID_BIRMINGHAM, page.getRevisionId());
-		assertEquals(URL_BIRMINGHAM, page.getUrl());
-		assertEquals(TITLE_BIRMINGHAM, page.getTitle());
+		assertEquals(57252L, page.getPageId());
+		assertEquals(105226552L, page.getRevisionId());
+		assertEquals("http://de.wikipedia.org/wiki/Birmingham", page.getUrl());
+		assertEquals("Birmingham", page.getTitle());
 		assertEquals(wikitextBirmingham, page.getWikiText());
 		assertNotNull(page.getWikiAst());
-		
+
 		// NOTE: This test does not check whether the AST produced by WikiTextParser is
 		// correct. It merely checks that a CompiledPage object is created and added
 		// to the WikiPage object.
 	}
-	
+
 }

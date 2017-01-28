@@ -23,31 +23,31 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.culturegraph.mf.exceptions.MetafactureException;
-import org.culturegraph.mf.framework.DefaultStreamPipe;
+import org.culturegraph.mf.commons.ResourceUtil;
+import org.culturegraph.mf.commons.reflection.ObjectFactory;
+import org.culturegraph.mf.framework.MetafactureException;
 import org.culturegraph.mf.framework.ObjectPipe;
 import org.culturegraph.mf.framework.StreamPipe;
 import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
+import org.culturegraph.mf.framework.helpers.DefaultStreamPipe;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.stream.pipe.ObjectTee;
-import org.culturegraph.mf.util.ResourceUtil;
-import org.culturegraph.mf.util.reflection.ObjectFactory;
+import org.culturegraph.mf.plumbing.ObjectTee;
 
 /**
- * A convenience module for managing multiple mediawiki analyzers. The 
- * MultiAnalyzer asks all analyzers for the wiki page representation 
- * they require (using the {@link Analyzer}-interface) and sets up the 
+ * A convenience module for managing multiple mediawiki analyzers. The
+ * MultiAnalyzer asks all analyzers for the wiki page representation
+ * they require (using the {@link Analyzer}-interface) and sets up the
  * required {@link WikiTextParser}s. The output of the analyses are
- * returned as a single record for each input page.   
- * 
+ * returned as a single record for each input page.
+ *
  * @see Analyzer
- * 
+ *
  * @author Christoph Böhme
- * 
+ *
  */
 @Description("A convenience module for managing multiple mediawiki analyzers.")
 @In(WikiPage.class)
@@ -63,17 +63,21 @@ public final class MultiAnalyzer implements ObjectPipe<WikiPage, StreamReceiver>
 
 	private String configFile;
 	private String parserConfig = WikiTextParser.DEFAULT_CONFIG;
-	
+
 	private final ObjectTee<WikiPage> tee = new ObjectTee<WikiPage>();
-	private final Map<WikiTextParser.ParseLevel, ObjectTee<WikiPage>> parsers = new HashMap<WikiTextParser.ParseLevel, ObjectTee<WikiPage>>();
+	private final Map<WikiTextParser.ParseLevel, ObjectTee<WikiPage>> parsers = new HashMap<>();
 	private final StreamPipe<StreamReceiver> merger =  new StripRecordBounderies();
 	private StreamReceiver receiver;
 
 	static {
-		ANALYZER_FACTORY.loadClassesFromMap(ResourceUtil.loadProperties(PROPERTIES_LOCATION), Analyzer.class);
+		try {
+			ANALYZER_FACTORY.loadClassesFromMap(ResourceUtil.loadProperties(PROPERTIES_LOCATION), Analyzer.class);
+		} catch (IOException e) {
+			throw new MetafactureException("Could not load properties", e);
+		}
 		try {
 			ANALYZER_FACTORY.loadClassesFromMap(ResourceUtil.loadProperties(USER_PROPERTIES_LOCATION), Analyzer.class);
-		} catch (MetafactureException e) {
+		} catch (IOException e) {
 			// user properties are not mandatory
 		}
 	}
@@ -81,11 +85,11 @@ public final class MultiAnalyzer implements ObjectPipe<WikiPage, StreamReceiver>
 	public MultiAnalyzer(final String configFile) throws IOException {
 		this.configFile = configFile;
 	}
-	
+
 	public void setParserConfig(final String parserConfig) {
 		this.parserConfig = parserConfig;
 	}
-	
+
 	public String getParserConfig() {
 		return parserConfig;
 	}
@@ -103,7 +107,7 @@ public final class MultiAnalyzer implements ObjectPipe<WikiPage, StreamReceiver>
 					throw new MetafactureException(e);
 				}
 				parser.setParseLevel(analyzer.requiredParseLevel());
-				parserTee = new ObjectTee<WikiPage>();
+				parserTee = new ObjectTee<>();
 
 				tee.addReceiver(parser);
 				parser.setReceiver(parserTee);
@@ -134,7 +138,7 @@ public final class MultiAnalyzer implements ObjectPipe<WikiPage, StreamReceiver>
 		tee.process(page);
 		receiver.endRecord();
 	}
-	
+
 	@Override
 	public void resetStream() {
 		merger.resetStream();
@@ -144,7 +148,7 @@ public final class MultiAnalyzer implements ObjectPipe<WikiPage, StreamReceiver>
 	public void closeStream() {
 		merger.closeStream();
 	}
-	
+
 	private void init() {
 		final List<String> lines = new LinkedList<String>();
 		try {

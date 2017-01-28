@@ -15,18 +15,18 @@
  */
 package org.culturegraph.mf.mediawiki.analyzer;
 
-import org.culturegraph.mf.framework.DefaultObjectPipe;
 import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
+import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 
 /**
  * A simple analyser that turns the contents of a WikiPage object
  * as stream events.
- * 
+ *
  * @author Christoph Böhme
  *
  */
@@ -42,18 +42,18 @@ public final class WikiPageToStream
 	public static final String URL_LITERAL = "URL";
 	public static final String TITLE_LITERAL = "PAGETITLE";
 	public static final String WIKITEXT_LITERAL = "WIKITEXT";
-	
+
 	private boolean outputWikiText;
-	
+
 	public WikiPageToStream() {
 		super();
 	}
-	
+
 	public WikiPageToStream(final boolean outputWikiText) {
 		super();
 		this.setOutputWikiText(outputWikiText);
 	}
-	
+
 	public boolean isOutputWikiText() {
 		return outputWikiText;
 	}
@@ -74,7 +74,7 @@ public final class WikiPageToStream
 		}
 		getReceiver().endRecord();
 	}
-	
+
 	@Override
 	public boolean wikiTextOnly() {
 		return true;

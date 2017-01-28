@@ -15,64 +15,64 @@
  */
 package org.culturegraph.mf.mediawiki.analyzer;
 
-import static org.junit.Assert.fail;
+import static org.mockito.Mockito.inOrder;
 
 import java.io.IOException;
 
-import org.culturegraph.mf.exceptions.FormatException;
+import org.culturegraph.mf.commons.ResourceUtil;
+import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.stream.converter.CGTextDecoder;
-import org.culturegraph.mf.stream.sink.EventList;
-import org.culturegraph.mf.stream.sink.StreamValidator;
-import org.culturegraph.mf.util.ResourceUtil;
+import org.junit.Rule;
 import org.junit.Test;
+import org.mockito.InOrder;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
 /**
  * @author Christoph Böhme
  *
  */
 public final class LinkExtractorTest {
-	private static final String EXPECTED_STREAM_FILE = "expected-streams/links-birmingham-simple.txt"; 
-	
-	private static final long PAGEID_BIRMINGHAM = 57252L;
-	private static final long REVISIONID_BIRMINGHAM = 105226552L;
-	private static final String URL_BIRMINGHAM = "http://de.wikipedia.org/wiki/Birmingham";
-	private static final String TITLE_BIRMINGHAM = "Birmingham";
-	private static final String WIKITEXT_FILE_BIRMINGHAM = "wikitext/birmingham-simple.txt";
-	
+
+	@Rule
+	public MockitoRule mockitoRule = MockitoJUnit.rule();
+
+	@Mock
+	private StreamReceiver receiver;
+
 	@Test
 	public void test() throws IOException {
-		
-		final CGTextDecoder cgTextDecoder = new CGTextDecoder();
-		final EventList expected = new EventList();
-		
-		cgTextDecoder.setReceiver(expected);
-		cgTextDecoder.process(ResourceUtil.loadTextFile(EXPECTED_STREAM_FILE));
-		cgTextDecoder.closeStream();
-		
 		final WikiTextParser wikiPageParser = new WikiTextParser();
 		wikiPageParser.setParseLevel(ParseLevel.PARSE);
 		final LinkExtractor linkExtractor = new LinkExtractor();
-		final StreamValidator validator = new StreamValidator(expected.getEvents());
-		
-		wikiPageParser.setReceiver(linkExtractor)
-				.setReceiver(validator);
-		
+
+		wikiPageParser
+				.setReceiver(linkExtractor)
+				.setReceiver(receiver);
+
 		final WikiPage page = new WikiPage();
-		page.setPageId(PAGEID_BIRMINGHAM);
-		page.setRevisionId(REVISIONID_BIRMINGHAM);
-		page.setUrl(URL_BIRMINGHAM);
-		page.setTitle(TITLE_BIRMINGHAM);
-		page.setWikiText(ResourceUtil.loadTextFile(WIKITEXT_FILE_BIRMINGHAM));
-		
-		try {
-			wikiPageParser.process(page);
-			wikiPageParser.closeStream();
-		} catch(FormatException e) {
-			fail(e.toString());
-		}
+		page.setPageId(57252L);
+		page.setRevisionId(105226552L);
+		page.setUrl("http://de.wikipedia.org/wiki/Birmingham");
+		page.setTitle("Birmingham");
+		page.setWikiText(ResourceUtil.loadTextFile(
+				"wikitext/birmingham-simple.txt"));
+
+		wikiPageParser.process(page);
+
+		final InOrder ordered = inOrder(receiver);
+		ordered.verify(receiver).startRecord("57252");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "West Midlands (Metropolitan County)");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Solihull");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Coventry");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Sandwell");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Dudley");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Walsall");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Wolverhampton");
+		ordered.verify(receiver).endRecord();
 	}
-	
+
 }

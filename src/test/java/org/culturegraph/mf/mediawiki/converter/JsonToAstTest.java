@@ -19,9 +19,9 @@ import static org.junit.Assert.assertNotNull;
 
 import java.io.IOException;
 
+import org.culturegraph.mf.commons.ResourceUtil;
+import org.culturegraph.mf.javaintegration.ObjectCollector;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.stream.pipe.ObjectBuffer;
-import org.culturegraph.mf.util.ResourceUtil;
 import org.junit.Test;
 
 /**
@@ -30,32 +30,26 @@ import org.junit.Test;
  */
 public final class JsonToAstTest {
 
-	private static final long PAGEID_BIRMINGHAM = 57252L;
-	private static final long REVISIONID_BIRMINGHAM = 105226552L;
-	private static final String URL_BIRMINGHAM = "http://de.wikipedia.org/wiki/Birmingham";
-	private static final String TITLE_BIRMINGHAM = "Birmingham";
-	private static final String JSON_FILE_BIRMINGHAM = "json/birmingham.json";
-	
 	@Test
 	public void testJsonToAst() throws IOException {
 		final JsonToAst jsonToAst = new JsonToAst();
-		final ObjectBuffer<WikiPage> result = new ObjectBuffer<WikiPage>();
-		
+		final ObjectCollector<WikiPage> result = new ObjectCollector<>();
+
 		jsonToAst.setReceiver(result);
 
 		final WikiPage page = new WikiPage();
-		page.setPageId(PAGEID_BIRMINGHAM);
-		page.setRevisionId(REVISIONID_BIRMINGHAM);
-		page.setUrl(URL_BIRMINGHAM);
-		page.setTitle(TITLE_BIRMINGHAM);
-		page.setJsonAst(ResourceUtil.loadTextFile(JSON_FILE_BIRMINGHAM));
+		page.setPageId(57252L);
+		page.setRevisionId(105226552L);
+		page.setUrl("http://de.wikipedia.org/wiki/Birmingham");
+		page.setTitle("Birmingham");
+		page.setJsonAst(ResourceUtil.loadTextFile("json/birmingham.json"));
 		page.setWikiAst(null);
 
 		jsonToAst.process(page);
 		jsonToAst.closeStream();
-		
+
 		assertNotNull(result.pop().getWikiAst());
-		
+
 		// NOTE: This test does not check whether the AST created
 		// from the JSON presentation is correct. It merely tests
 		// that an AST is created.

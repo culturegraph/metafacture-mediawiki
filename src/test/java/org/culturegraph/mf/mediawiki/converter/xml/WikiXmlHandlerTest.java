@@ -19,10 +19,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
+import org.culturegraph.mf.io.ResourceOpener;
+import org.culturegraph.mf.javaintegration.ObjectCollector;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.stream.converter.xml.XmlDecoder;
-import org.culturegraph.mf.stream.pipe.ObjectBuffer;
-import org.culturegraph.mf.stream.source.ResourceOpener;
+import org.culturegraph.mf.xml.XmlDecoder;
 import org.junit.Test;
 
 /**
@@ -34,7 +34,7 @@ public final class WikiXmlHandlerTest {
 	private static final String INCLUDE_MAIN_NS = "^[^:]+$";
 
 	private static final String WIKI_XML_FILE = "xmldumps/frankfurt-birmingham-v0.7.xml";
-	
+
 	private static final long PAGEID_BIRMINGHAM = 57252L;
 	private static final long REVISIONID_BIRMINGHAM = 105226552L;
 	private static final String URL_BIRMINGHAM = "http://de.wikipedia.org/wiki/Birmingham";
@@ -46,37 +46,37 @@ public final class WikiXmlHandlerTest {
 	private static final String URL_FRANKFURT = "http://de.wikipedia.org/wiki/Frankfurt";
 	private static final String TITLE_FRANKFURT = "Frankfurt";
 	private static final String WIKITEXT_FRANKFURT = "Wikitext Frankfurt";
-	
+
 	@Test
 	public void testIncludePagesPattern() {
 		final WikiXmlHandler wikiXmlHandler = new WikiXmlHandler();
 		wikiXmlHandler.setIncludePagesPattern(INCLUDE_MAIN_NS);
-		
+
 		runTest(wikiXmlHandler);
 	}
-	
+
 	@Test
 	public void testIncludeNamespaceIds() {
 		final WikiXmlHandler wikiXmlHandler = new WikiXmlHandler();
 		wikiXmlHandler.setIncludeNamespaceIds("0");
-		
+
 		runTest(wikiXmlHandler);
 	}
 
 	private void runTest(final WikiXmlHandler wikiXmlHandler) {
 		final ResourceOpener opener = new ResourceOpener();
 		final XmlDecoder xmlDecoder = new XmlDecoder();
-		final ObjectBuffer<WikiPage> results = new ObjectBuffer<WikiPage>();
-		
+		final ObjectCollector<WikiPage> results = new ObjectCollector<WikiPage>();
+
 		opener.setReceiver(xmlDecoder)
 				.setReceiver(wikiXmlHandler)
 				.setReceiver(results);
-		
+
 		opener.process(WIKI_XML_FILE);
 		opener.closeStream();
-		
+
 		WikiPage page;
-		
+
 		page = results.pop();
 		assertNotNull(page);
 		assertEquals(PAGEID_BIRMINGHAM, page.getPageId());
@@ -94,9 +94,9 @@ public final class WikiXmlHandlerTest {
 		assertEquals(TITLE_FRANKFURT, page.getTitle());
 		assertEquals(WIKITEXT_FRANKFURT, page.getWikiText());
 		assertNull(page.getWikiAst());
-		
+
 		page = results.pop();
-		assertNull(page);		
+		assertNull(page);
 	}
-	
+
 }

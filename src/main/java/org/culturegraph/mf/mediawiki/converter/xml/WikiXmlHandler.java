@@ -27,22 +27,22 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.culturegraph.mf.exceptions.MetafactureException;
-import org.culturegraph.mf.framework.DefaultXmlPipe;
+import org.culturegraph.mf.framework.MetafactureException;
 import org.culturegraph.mf.framework.ObjectReceiver;
 import org.culturegraph.mf.framework.XmlReceiver;
 import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
+import org.culturegraph.mf.framework.helpers.DefaultXmlPipe;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
 /**
  * Extracts wiki pages from a media wiki xml dump.
- * 
+ *
  * @author Christoph Böhme
- * 
+ *
  */
 @Description("Extracts wiki pages from a media wiki xml dump.")
 @In(XmlReceiver.class)
@@ -61,9 +61,9 @@ public final class WikiXmlHandler extends
 
 	private final Deque<Tag> stack = new LinkedList<Tag>();
 	private final StringBuilder charData = new StringBuilder();
-	
+
 	private final Set<Integer> includeNamespaceIds = new HashSet<Integer>();
-	
+
 	private Matcher includePagesMatcher;
 
 	private String baseURL;
@@ -181,7 +181,7 @@ public final class WikiXmlHandler extends
 		if (!includePage) {
 			return;
 		}
-		
+
 		currentPage.setTitle(charData.toString());
 		currentPage.setUrl(urlFromTitle(currentPage.getTitle()));
 
@@ -190,20 +190,20 @@ public final class WikiXmlHandler extends
 			includePage = includePagesMatcher.matches();
 		}
 	}
-	
+
 	private void handleNSEndElement() {
 		if (!includePage) {
 			return;
 		}
-		
+
 		final int namespaceId = Integer.parseInt(charData.toString().trim());
 		currentPage.setNamespaceId(namespaceId);
-		
+
 		if (!includeNamespaceIds.isEmpty()) {
 			includePage = includeNamespaceIds.contains(Integer.valueOf(namespaceId));
 		}
 	}
-	
+
 	private void handleIdEndElement() {
 		if (!includePage) {
 			return;
@@ -231,9 +231,9 @@ public final class WikiXmlHandler extends
 	/**
 	 * Cuts of the last component of the URL. This assumes that the URL in base
 	 * points to the wiki's main page as it is the case in dumps of Wikipedia.
-	 * 
-	 * @param base
-	 * @return
+	 *
+	 * @param base URL from which to extract a base URL
+	 * @return the base URL
 	 */
 	private String extractBaseURL(final String base) {
 		final String trimmedBase = base.trim();
@@ -247,18 +247,16 @@ public final class WikiXmlHandler extends
 	 * Turns the title into a URL. This method will replace all spaces in the
 	 * title with underscores, URL encode the title and attach it to the base
 	 * URL.
-	 * 
-	 * @param title
-	 * @return
+	 *
+	 * @param title of the Wikipage
+	 * @return a URL pointing to the Wikipage with title {@code title}.
 	 */
 	private String urlFromTitle(final String title) {
 		if (baseURL == null) {
 			return null;
 		}
 		try {
-			return baseURL
-					+ URLEncoder.encode(title.trim().replace(" ", "_"),
-							ENCODING);
+			return baseURL + URLEncoder.encode(title.trim().replace(" ", "_"), ENCODING);
 		} catch (UnsupportedEncodingException e) {
 			throw new MetafactureException(e);
 		}

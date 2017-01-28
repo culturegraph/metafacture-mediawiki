@@ -15,17 +15,18 @@
  */
 package org.culturegraph.mf.mediawiki.analyzer;
 
-import static org.junit.Assert.fail;
+import static org.mockito.Mockito.inOrder;
 
 import java.io.IOException;
 
-import org.culturegraph.mf.exceptions.FormatException;
+import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.stream.converter.CGTextDecoder;
-import org.culturegraph.mf.stream.sink.EventList;
-import org.culturegraph.mf.stream.sink.StreamValidator;
-import org.culturegraph.mf.util.ResourceUtil;
+import org.junit.Rule;
 import org.junit.Test;
+import org.mockito.InOrder;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
 /**
  * @author Christoph Böhme
@@ -33,44 +34,36 @@ import org.junit.Test;
  */
 public final class WikiPageToStreamTest {
 
-	private static final String EXPECTED_STREAM_FILE = "expected-streams/wikipage-birmingham.txt"; 
+	@Rule
+	public MockitoRule mockitoRule = MockitoJUnit.rule();
 
-	private static final long PAGEID_BIRMINGHAM = 57252L;
-	private static final long REVISIONID_BIRMINGHAM = 105226552L;
-	private static final String URL_BIRMINGHAM = "http://de.wikipedia.org/wiki/Birmingham";
-	private static final String TITLE_BIRMINGHAM = "Birmingham";
-	private static final String WIKITEXT_BIRMINGHAM = "Wikitext Birmingham";
+	@Mock
+	private StreamReceiver receiver;
 
 	@Test
 	public void test() throws IOException {
-		
-		final CGTextDecoder cgTextDecoder = new CGTextDecoder();
-		final EventList expected = new EventList();
-		
-		cgTextDecoder.setReceiver(expected);
-		cgTextDecoder.process(ResourceUtil.loadTextFile(EXPECTED_STREAM_FILE));
-		cgTextDecoder.closeStream();
-
 		final WikiPageToStream wikiPageToStream = new WikiPageToStream();
 		wikiPageToStream.setOutputWikiText(true);
-		final StreamValidator validator = new StreamValidator(expected.getEvents());
-		
-		wikiPageToStream.setReceiver(validator);
+
+		wikiPageToStream.setReceiver(receiver);
 
 		final WikiPage page = new WikiPage();
-		page.setPageId(PAGEID_BIRMINGHAM);
-		page.setRevisionId(REVISIONID_BIRMINGHAM);
-		page.setUrl(URL_BIRMINGHAM);
-		page.setTitle(TITLE_BIRMINGHAM);
-		page.setWikiText(WIKITEXT_BIRMINGHAM);
+		page.setPageId(57252L);
+		page.setRevisionId(105226552L);
+		page.setUrl("http://de.wikipedia.org/wiki/Birmingham");
+		page.setTitle("Birmingham");
+		page.setWikiText("Wikitext Birmingham");
 		page.setWikiAst(null);
-				
-		try {
-			wikiPageToStream.process(page);
-			wikiPageToStream.closeStream();
-		} catch(FormatException e) {
-			fail(e.toString());
-		}
+
+		wikiPageToStream.process(page);
+
+		final InOrder ordered = inOrder(receiver);
+		ordered.verify(receiver).startRecord("57252");
+		ordered.verify(receiver).literal("PAGE_ID", "57252");
+		ordered.verify(receiver).literal("REVISION_ID", "105226552");
+		ordered.verify(receiver).literal("URL", "http://de.wikipedia.org/wiki/Birmingham");
+		ordered.verify(receiver).literal("PAGETITLE", "Birmingham");
+		ordered.verify(receiver).literal("WIKITEXT", "Wikitext Birmingham");
 	}
 
 }

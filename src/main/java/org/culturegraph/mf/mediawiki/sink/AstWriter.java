@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
-import org.culturegraph.mf.exceptions.MetafactureException;
+import org.culturegraph.mf.framework.MetafactureException;
 import org.culturegraph.mf.framework.ObjectReceiver;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 
@@ -27,22 +27,22 @@ import de.fau.cs.osr.ptk.common.AstPrinter;
 
 /**
  * Writes out the AST of a {@link WikiPage}.
- * 
+ *
  * @author Christoph Böhme
  *
  */
 public final class AstWriter implements ObjectReceiver<WikiPage> {
 
 	private final Writer writer;
-	
+
 	public AstWriter() {
 		this(new OutputStreamWriter(System.out));
 	}
-	
+
 	public AstWriter(final Writer writer) {
 		this.writer = writer;
 	}
-	
+
 	@Override
 	public void resetStream() {
 		throw new UnsupportedOperationException("Cannot reset PrintAst");

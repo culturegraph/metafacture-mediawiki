@@ -15,18 +15,21 @@
  */
 package org.culturegraph.mf.mediawiki.analyzer;
 
-import static org.junit.Assert.fail;
+import static org.mockito.Mockito.inOrder;
 
 import java.io.IOException;
 
-import org.culturegraph.mf.exceptions.FormatException;
+import org.culturegraph.mf.commons.ResourceUtil;
+import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.stream.converter.CGTextDecoder;
-import org.culturegraph.mf.stream.sink.EventList;
-import org.culturegraph.mf.stream.sink.StreamValidator;
-import org.culturegraph.mf.util.ResourceUtil;
+import org.culturegraph.mf.monitoring.StreamLogger;
+import org.junit.Rule;
 import org.junit.Test;
+import org.mockito.InOrder;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
 /**
  * @author Christoph Böhme
@@ -34,45 +37,45 @@ import org.junit.Test;
  */
 public final class TemplateExtractorTest {
 
-	private static final String EXPECTED_STREAM_FILE = "expected-streams/infobox-birmingham-simple.txt"; 
-	
-	private static final long PAGEID_BIRMINGHAM = 57252L;
-	private static final long REVISIONID_BIRMINGHAM = 105226552L;
-	private static final String URL_BIRMINGHAM = "http://de.wikipedia.org/wiki/Birmingham";
-	private static final String TITLE_BIRMINGHAM = "Birmingham";
-	private static final String WIKITEXT_FILE_BIRMINGHAM = "wikitext/birmingham-simple.txt";
+	@Rule
+	public MockitoRule mockitoRule = MockitoJUnit.rule();
+
+	@Mock
+	private StreamReceiver receiver;
 
 	@Test
 	public void test() throws IOException {
-		
-		final CGTextDecoder cgTextDecoder = new CGTextDecoder();
-		final EventList expected = new EventList();
-		
-		cgTextDecoder.setReceiver(expected);
-		cgTextDecoder.process(ResourceUtil.loadTextFile(EXPECTED_STREAM_FILE));
-		cgTextDecoder.closeStream();
-		
 		final WikiTextParser wikiPageParser = new WikiTextParser();
 		final TemplateExtractor templateExtractor = new TemplateExtractor();
 		templateExtractor.setNamePattern("Infobox.*");
-		final StreamValidator validator = new StreamValidator(expected.getEvents());
-		
-		wikiPageParser.setReceiver(templateExtractor)
-				.setReceiver(validator);
-		
+
+		wikiPageParser
+				.setReceiver(templateExtractor)
+				.setReceiver(new StreamLogger())
+				.setReceiver(receiver);
+
 		final WikiPage page = new WikiPage();
-		page.setPageId(PAGEID_BIRMINGHAM);
-		page.setRevisionId(REVISIONID_BIRMINGHAM);
-		page.setUrl(URL_BIRMINGHAM);
-		page.setTitle(TITLE_BIRMINGHAM);
-		page.setWikiText(ResourceUtil.loadTextFile(WIKITEXT_FILE_BIRMINGHAM));
-		
-		try {
-			wikiPageParser.process(page);
-			wikiPageParser.closeStream();
-		} catch(FormatException e) {
-			fail(e.toString());
-		}
+		page.setPageId(57252L);
+		page.setRevisionId(105226552L);
+		page.setUrl("http://de.wikipedia.org/wiki/Birmingham");
+		page.setTitle("Birmingham");
+		page.setWikiText(ResourceUtil.loadTextFile(
+				"wikitext/birmingham-simple.txt"));
+
+		wikiPageParser.process(page);
+
+		final InOrder ordered = inOrder(receiver);
+		ordered.verify(receiver).startRecord("57252");
+		ordered.verify(receiver).startEntity("Infobox_Ort_im_Vereinigten_Königreich");
+		ordered.verify(receiver).literal("_TEMPLATE_", "");
+		ordered.verify(receiver).literal("official_name", "City of Birmingham");
+		ordered.verify(receiver).literal("local_name", "");
+		ordered.verify(receiver).literal("country", "England");
+		ordered.verify(receiver).literal("population", "1036878");
+		ordered.verify(receiver).literal("shire_county", "West Midlands");
+		ordered.verify(receiver).literal("website", "www.birmingham.gov.uk");
+		ordered.verify(receiver).endEntity();
+		ordered.verify(receiver).endRecord();
 	}
 
 }

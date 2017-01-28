@@ -15,16 +15,16 @@
  */
 package org.culturegraph.mf.mediawiki.converter;
 
-import org.culturegraph.mf.exceptions.MetafactureException;
-import org.culturegraph.mf.framework.DefaultObjectPipe;
+import org.culturegraph.mf.framework.MetafactureException;
 import org.culturegraph.mf.framework.ObjectReceiver;
+import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 
 import de.fau.cs.osr.ptk.common.json.JsonConverter;
 
 /**
  * Adds a serialised version of the AST to the {@link WikiPage} object.
- * 
+ *
  * @author Christoph Böhme
  */
 public final class AstToJson extends DefaultObjectPipe<WikiPage, ObjectReceiver<WikiPage>> {
@@ -35,6 +35,6 @@ public final class AstToJson extends DefaultObjectPipe<WikiPage, ObjectReceiver<
 			throw new MetafactureException("The wiki page does not contain an AST");
 		}
 		wikiPage.setJsonAst(JsonConverter.toJson(wikiPage.getWikiAst(), false));
-		getReceiver().process(wikiPage);	
+		getReceiver().process(wikiPage);
 	}
 }

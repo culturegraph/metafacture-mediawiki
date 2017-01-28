@@ -18,18 +18,18 @@ package org.culturegraph.mf.mediawiki.analyzer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.culturegraph.mf.framework.DefaultObjectPipe;
 import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
+import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 
 /**
- * 
+ *
  * authority link extraction for wikitext (GND, LOC, IMDB, VIAF).
- * 
+ *
  * @author Markus Michael Geipel
  *
  */
@@ -46,7 +46,7 @@ implements Analyzer {
 	private static final Pattern AUTHORITY_PATTERN = Pattern.compile("\\{\\{\\s*normdaten\\s*\\|([^}]*)\\}\\}", Pattern.MULTILINE | Pattern.CASE_INSENSITIVE);
 	private static final Pattern ENTRY_PATTERN = Pattern.compile("|", Pattern.LITERAL);
 	private static final Pattern KEYVALUE_PATTERN = Pattern.compile("(.*)\\s*=\\s*(.*)");
-	
+
 	@Override
 	public boolean wikiTextOnly() {
 		return true;
@@ -56,10 +56,10 @@ implements Analyzer {
 	public ParseLevel requiredParseLevel() {
 		return null;
 	}
-	
+
 	@Override
 	public void process(final WikiPage page) {
-		
+
 		final String wikiText = page.getWikiText();
 		final Matcher authMatcher = AUTHORITY_PATTERN.matcher(wikiText);
 		if(authMatcher.find()){
@@ -76,4 +76,5 @@ implements Analyzer {
 			getReceiver().literal("imdb", imdbMatcher.group(1));
 		}
 	}
+
 }

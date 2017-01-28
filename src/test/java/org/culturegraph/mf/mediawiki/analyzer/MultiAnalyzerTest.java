@@ -15,18 +15,20 @@
  */
 package org.culturegraph.mf.mediawiki.analyzer;
 
-import static org.junit.Assert.fail;
+import static org.mockito.Mockito.inOrder;
 
 import java.io.IOException;
 
-import org.culturegraph.mf.exceptions.FormatException;
+import org.culturegraph.mf.commons.ResourceUtil;
+import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.stream.converter.CGTextDecoder;
-import org.culturegraph.mf.stream.pipe.StreamLogger;
-import org.culturegraph.mf.stream.sink.EventList;
-import org.culturegraph.mf.stream.sink.StreamValidator;
-import org.culturegraph.mf.util.ResourceUtil;
+import org.culturegraph.mf.monitoring.StreamLogger;
+import org.junit.Rule;
 import org.junit.Test;
+import org.mockito.InOrder;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
 /**
  * @author Christoph Böhme
@@ -35,43 +37,52 @@ import org.junit.Test;
 public final class MultiAnalyzerTest {
 
 	private static final String ANALYZERS_CONFIG = "multi-analyzer-test.conf";
-	
-	private static final String EXPECTED_STREAM_FILE = "expected-streams/infobox-klimatabelle-birmingham-simple.txt"; 
-	
-	private static final long PAGEID_BIRMINGHAM = 57252L;
-	private static final long REVISIONID_BIRMINGHAM = 105226552L;
-	private static final String URL_BIRMINGHAM = "http://de.wikipedia.org/wiki/Birmingham";
-	private static final String TITLE_BIRMINGHAM = "Birmingham";
-	private static final String WIKITEXT_FILE_BIRMINGHAM = "wikitext/birmingham-simple.txt";
+
+	@Rule
+	public MockitoRule mockitoRule = MockitoJUnit.rule();
+
+	@Mock
+	private StreamReceiver receiver;
 
 	@Test
 	public void test() throws IOException {
-		
-		final CGTextDecoder cgTextDecoder = new CGTextDecoder();
-		final EventList expected = new EventList();
-		
-		cgTextDecoder.setReceiver(expected);
-		cgTextDecoder.process(ResourceUtil.loadTextFile(EXPECTED_STREAM_FILE));
-		cgTextDecoder.closeStream();
-
 		final MultiAnalyzer multiAnalyzer = new MultiAnalyzer(ANALYZERS_CONFIG);
-		final StreamValidator validator = new StreamValidator(expected.getEvents());
 
-		multiAnalyzer.setReceiver(new StreamLogger()).setReceiver(validator);
-		
+		multiAnalyzer
+				.setReceiver(receiver);
+
 		final WikiPage page = new WikiPage();
-		page.setPageId(PAGEID_BIRMINGHAM);
-		page.setRevisionId(REVISIONID_BIRMINGHAM);
-		page.setUrl(URL_BIRMINGHAM);
-		page.setTitle(TITLE_BIRMINGHAM);
-		page.setWikiText(ResourceUtil.loadTextFile(WIKITEXT_FILE_BIRMINGHAM));
-		
-		try {
-			multiAnalyzer.process(page);
-			multiAnalyzer.closeStream();
-		} catch(FormatException e) {
-			fail(e.toString());
-		}
+		page.setPageId(57252L);
+		page.setRevisionId(105226552L);
+		page.setUrl("http://de.wikipedia.org/wiki/Birmingham");
+		page.setTitle("Birmingham");
+		page.setWikiText(ResourceUtil.loadTextFile("wikitext/birmingham-simple.txt"));
+
+		multiAnalyzer.process(page);
+
+		final InOrder ordered = inOrder(receiver);
+		ordered.verify(receiver).startRecord("57252");
+		ordered.verify(receiver).literal("PAGE_ID", "57252");
+		ordered.verify(receiver).literal("REVISION_ID", "105226552");
+		ordered.verify(receiver).literal("URL", "http://de.wikipedia.org/wiki/Birmingham");
+		ordered.verify(receiver).literal("PAGETITLE", "Birmingham");
+		ordered.verify(receiver).startEntity("Infobox_Ort_im_Vereinigten_Königreich");
+		ordered.verify(receiver).literal("_TEMPLATE_", "");
+		ordered.verify(receiver).literal("official_name", "City of Birmingham");
+		ordered.verify(receiver).literal("local_name", "");
+		ordered.verify(receiver).literal("country", "England");
+		ordered.verify(receiver).literal("population", "1036878");
+		ordered.verify(receiver).literal("shire_county", "West Midlands");
+		ordered.verify(receiver).literal("website", "www.birmingham.gov.uk");
+		ordered.verify(receiver).endEntity();
+		ordered.verify(receiver).startEntity("Klimatabelle");
+		ordered.verify(receiver).literal("_TEMPLATE_", "");
+		ordered.verify(receiver).literal("TABELLE", "deaktiviert");
+		ordered.verify(receiver).literal("DIAGRAMM_TEMPERATUR", "rechts");
+		ordered.verify(receiver).literal("DIAGRAMM_NIEDERSCHLAG", "deaktiviert");
+		ordered.verify(receiver).literal("DIAGRAMM_NIEDERSCHLAG_HÖHE", "200");
+		ordered.verify(receiver).endEntity();
+		ordered.verify(receiver).endRecord();
 	}
 
 }

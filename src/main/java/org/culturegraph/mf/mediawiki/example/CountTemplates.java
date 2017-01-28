@@ -17,23 +17,23 @@ package org.culturegraph.mf.mediawiki.example;
 
 import java.io.IOException;
 
+import org.culturegraph.mf.formeta.FormetaEncoder;
 import org.culturegraph.mf.formeta.formatter.FormatterStyle;
+import org.culturegraph.mf.io.ObjectStdoutWriter;
+import org.culturegraph.mf.io.ResourceOpener;
+import org.culturegraph.mf.javaintegration.MapToStream;
 import org.culturegraph.mf.mediawiki.analyzer.TemplateExtractor;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.converter.xml.WikiXmlHandler;
-import org.culturegraph.mf.stream.converter.FormetaEncoder;
-import org.culturegraph.mf.stream.converter.MapToStream;
-import org.culturegraph.mf.stream.converter.xml.XmlDecoder;
-import org.culturegraph.mf.stream.sink.Histogram;
-import org.culturegraph.mf.stream.sink.ObjectStdoutWriter;
-import org.culturegraph.mf.stream.source.ResourceOpener;
+import org.culturegraph.mf.statistics.Histogram;
+import org.culturegraph.mf.xml.XmlDecoder;
 
 /**
  * Prints a histogram of the templates used in wikipedia.
- * 
+ *
  * @author Christoph Böhme
- * 
+ *
  */
 public final class CountTemplates {
 
@@ -50,13 +50,13 @@ public final class CountTemplates {
 		final String templateNamePattern = args[1];
 
 		final ResourceOpener opener = new ResourceOpener();
-		final XmlDecoder xmlDecoder = new XmlDecoder();		
+		final XmlDecoder xmlDecoder = new XmlDecoder();
 		final WikiXmlHandler xmlHandler = new WikiXmlHandler();
 		xmlHandler.setIncludeNamespaceIds("0");
 		final WikiTextParser wikiParser = new WikiTextParser();
 		wikiParser.setParseLevel(ParseLevel.PREPROCESS);
 		final TemplateExtractor templateExtactor = new TemplateExtractor();
-		templateExtactor.setNamePattern(templateNamePattern);		
+		templateExtactor.setNamePattern(templateNamePattern);
 		final Histogram histogram = new Histogram();
 		histogram.setCountEntities(true);
 
@@ -77,7 +77,7 @@ public final class CountTemplates {
 		mapToStream
 			.setReceiver(encoder)
 			.setReceiver(writer);
-		
+
 		mapToStream.process(histogram.getHistogram());
 		mapToStream.closeStream();
 	}

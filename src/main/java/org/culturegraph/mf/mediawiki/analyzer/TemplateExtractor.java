@@ -18,11 +18,11 @@ package org.culturegraph.mf.mediawiki.analyzer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.culturegraph.mf.framework.DefaultObjectPipe;
 import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
+import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 import org.culturegraph.mf.mediawiki.util.TextExtractor;
@@ -34,34 +34,34 @@ import de.fau.cs.osr.ptk.common.ast.AstNode;
 
 /**
  * Extracts all templates from the wiki page whose name matches
- * a pattern. Each template is wrapped in an entity and each 
+ * a pattern. Each template is wrapped in an entity and each
  * key value pair in the template is emitted as an literal. The
- * name of the entity is the template name. Spaces in entity and 
+ * name of the entity is the template name. Spaces in entity and
  * literal names are replaced with underscores.
- * 
+ *
  * @author Christoph Böhme
  *
  */
 @Description("Extracts all templates from the wiki page whose name matches a pattern.")
 @In(WikiPage.class)
 @Out(StreamReceiver.class)
-public final class TemplateExtractor 
+public final class TemplateExtractor
 		extends DefaultObjectPipe<WikiPage, StreamReceiver>
 		implements Analyzer {
 
 	private Matcher nameMatcher;
-	
+
 	private final TemplateVisitor visitor = new TemplateVisitor();
 
 	public TemplateExtractor() {
 		this("");
 	}
-	
+
 	public TemplateExtractor(final String namePattern) {
 		super();
 		setNamePattern(namePattern);
 	}
-	
+
 	public void setNamePattern(final String namePattern) {
 		nameMatcher = Pattern.compile(namePattern).matcher("");
 	}
@@ -89,7 +89,7 @@ public final class TemplateExtractor
 
 	/**
 	 * Searches the AST for template nodes and outputs the
-	 * relevant stream events. 
+	 * relevant stream events.
 	 */
 	public class TemplateVisitor extends TraverseTree {
 
@@ -124,9 +124,9 @@ public final class TemplateExtractor
 		}
 
 		/**
-		 * Removes everything between <> from the string and replaces
+		 * Removes everything between &lt;&gt; from the string and replaces
 		 * internal and external links with their link text.
-		 * 
+		 *
 		 * @param string string to sanitise
 		 * @return sanitised version of the input
 		 */
@@ -136,7 +136,7 @@ public final class TemplateExtractor
 					.replaceAll("\\[(?:.*? )*?([^ ]*?)\\]", "$1")
 					.trim();
 		}
-		
+
 	}
 
 }

@@ -15,26 +15,27 @@
  */
 package org.culturegraph.mf.mediawiki.analyzer;
 
-import org.culturegraph.mf.framework.DefaultObjectPipe;
 import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
+import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.type.WikiPage;
 
 /**
- * 
+ *
  * very simple but efficient link extraction for wikitext.
- * 
+ *
  * @author Markus Michael Geipel
  *
  */
 @Description("Very simple but efficient link extraction for wikitext.")
 @In(WikiPage.class)
 @Out(StreamReceiver.class)
-public final class SimpleLinkExtractor extends DefaultObjectPipe<WikiPage, StreamReceiver>
-implements Analyzer {
+public final class SimpleLinkExtractor
+		extends DefaultObjectPipe<WikiPage, StreamReceiver>
+		implements Analyzer {
 
 	@Override
 	public boolean wikiTextOnly() {
@@ -45,13 +46,13 @@ implements Analyzer {
 	public ParseLevel requiredParseLevel() {
 		return null;
 	}
-	
+
 	@Override
 	public void process(final WikiPage page) {
-		
+
 		//getReceiver().startRecord(Long.toString(page.getPageId()));
 		final String wikiText = page.getWikiText();
-		
+
 		int start = 0;
 
 		while (true) {
@@ -104,6 +105,6 @@ implements Analyzer {
 		}
 		//getReceiver().endRecord();
 	}
-	
+
 
 }

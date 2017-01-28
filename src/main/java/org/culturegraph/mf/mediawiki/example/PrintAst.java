@@ -17,16 +17,16 @@ package org.culturegraph.mf.mediawiki.example;
 
 import java.io.IOException;
 
+import org.culturegraph.mf.io.HttpOpener;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
 import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
 import org.culturegraph.mf.mediawiki.converter.xml.WikiXmlHandler;
 import org.culturegraph.mf.mediawiki.sink.AstWriter;
-import org.culturegraph.mf.stream.converter.xml.XmlDecoder;
-import org.culturegraph.mf.stream.source.HttpOpener;
+import org.culturegraph.mf.xml.XmlDecoder;
 
 /**
  * Parses a wiki page and prints the AST.
- * 
+ *
  * @author Christoph Böhme
  */
 public final class PrintAst {
@@ -37,7 +37,7 @@ public final class PrintAst {
 	private PrintAst() {
 		// Nothing to do
 	}
-	
+
 	public static void main(final String[] args) throws IOException {
 		final String pageUrl;
 		if (args.length > 0) {
@@ -45,7 +45,7 @@ public final class PrintAst {
 		} else {
 			pageUrl = BASE_URL + DEFAULT_PAGE;
 		}
-		
+
 		final HttpOpener opener = new HttpOpener();
 		final XmlDecoder xmlDecoder = new XmlDecoder();
 		final WikiXmlHandler xmlHandler = new WikiXmlHandler();
@@ -53,12 +53,12 @@ public final class PrintAst {
 		final WikiTextParser wikiParser = new WikiTextParser("classpath:/parser-config/WikipediaDE.xml");
 		wikiParser.setParseLevel(ParseLevel.POSTPROCESS);
 		final AstWriter writer = new AstWriter();
-		
+
 		opener.setReceiver(xmlDecoder)
 				.setReceiver(xmlHandler)
 				.setReceiver(wikiParser)
 				.setReceiver(writer);
-		
+
 		opener.process(pageUrl);
 		opener.closeStream();
 	}
