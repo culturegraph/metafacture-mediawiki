@@ -38,7 +38,7 @@ import de.fau.cs.osr.ptk.common.ast.NodeList;
 /**
  * Traverses an AST. This is a base class for doing a
  * depth-first traversal of a wiki page AST.
- * 
+ *
  * @author Christoph Böhme
  *
  */
@@ -49,10 +49,7 @@ public class TraverseTree extends AstVisitor {
 
 	public void visit(final AstNode node) {
 		// Skip all node types not handled below
-		if (LOG.isDebugEnabled()) {
-			LOG.debug("Unhandled AST node type: "
-					+ node.getNodeTypeName());
-		}
+		LOG.debug("Unhandled AST node type: {}", node.getNodeTypeName());
 	}
 
 	public void visit(final NodeList node) {
@@ -99,7 +96,7 @@ public class TraverseTree extends AstVisitor {
 	public void visit(final TableRow node) {
 		dispatch(node.getBody());
 	}
-	
+
 	public void visit(final Template node) {
 		dispatch(node.getName());
 		dispatch(node.getArgs());
@@ -113,5 +110,5 @@ public class TraverseTree extends AstVisitor {
 	public void visit(final XmlElement node) {
 		dispatch(node.getBody());
 	}
-	
+
 }
