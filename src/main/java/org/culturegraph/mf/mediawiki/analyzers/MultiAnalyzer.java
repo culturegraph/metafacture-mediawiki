@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.culturegraph.mf.mediawiki.analyzer;
+package org.culturegraph.mf.mediawiki.analyzers;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -33,8 +33,8 @@ import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
 import org.culturegraph.mf.framework.helpers.DefaultStreamPipe;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
-import org.culturegraph.mf.mediawiki.type.WikiPage;
+import org.culturegraph.mf.mediawiki.WikiTextParser;
+import org.culturegraph.mf.mediawiki.objects.WikiPage;
 import org.culturegraph.mf.plumbing.ObjectTee;
 
 /**

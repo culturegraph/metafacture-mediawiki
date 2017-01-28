@@ -13,17 +13,17 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.culturegraph.mf.mediawiki.type;
+package org.culturegraph.mf.mediawiki.objects;
 
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
+import org.culturegraph.mf.mediawiki.WikiTextParser.ParseLevel;
 import org.sweble.wikitext.engine.CompiledPage;
 
 /**
  * Stores the wiki text, an optional AST of the wiki text and
  * additional metadata of a wiki page.
- * 
+ *
  * @author Christoph Böhme
- * 
+ *
  */
 public final class WikiPage {
 
@@ -92,7 +92,7 @@ public final class WikiPage {
 	public void setWikiAst(final CompiledPage wikiAst) {
 		this.wikiAst = wikiAst;
 	}
-	
+
 	public String getJsonAst() {
 		return jsonAst;
 	}
@@ -112,8 +112,8 @@ public final class WikiPage {
 	@Override
 	public String toString() {
 		final String comma = ", ";
-		
-		return "WikiPage(" 
+
+		return "WikiPage("
 				+ "url=" + url + comma
 				+ "namespaceId=" + namespaceId + comma
 				+ "title=" + title + comma
@@ -121,5 +121,5 @@ public final class WikiPage {
 				+ "revisionId=" + revisionId
 				+ ")";
 	}
-	
+
 }

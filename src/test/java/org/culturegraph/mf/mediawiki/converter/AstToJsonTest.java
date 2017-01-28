@@ -21,8 +21,10 @@ import java.io.IOException;
 
 import org.culturegraph.mf.commons.ResourceUtil;
 import org.culturegraph.mf.javaintegration.ObjectCollector;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
-import org.culturegraph.mf.mediawiki.type.WikiPage;
+import org.culturegraph.mf.mediawiki.AstToJson;
+import org.culturegraph.mf.mediawiki.WikiTextParser;
+import org.culturegraph.mf.mediawiki.WikiTextParser.ParseLevel;
+import org.culturegraph.mf.mediawiki.objects.WikiPage;
 import org.junit.Test;
 
 /**

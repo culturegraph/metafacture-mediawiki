@@ -13,16 +13,16 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.culturegraph.mf.mediawiki.analyzer;
+package org.culturegraph.mf.mediawiki.analyzers;
 
 import org.culturegraph.mf.framework.StreamReceiver;
 import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
 import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
-import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.mediawiki.util.TraverseTree;
+import org.culturegraph.mf.mediawiki.WikiTextParser.ParseLevel;
+import org.culturegraph.mf.mediawiki.objects.WikiPage;
+import org.culturegraph.mf.mediawiki.helpers.TraverseTree;
 import org.sweble.wikitext.lazy.parser.InternalLink;
 
 /**

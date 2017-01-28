@@ -18,10 +18,10 @@ package org.culturegraph.mf.mediawiki.example;
 import java.io.IOException;
 
 import org.culturegraph.mf.io.HttpOpener;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
-import org.culturegraph.mf.mediawiki.converter.xml.WikiXmlHandler;
-import org.culturegraph.mf.mediawiki.sink.AstWriter;
+import org.culturegraph.mf.mediawiki.WikiTextParser;
+import org.culturegraph.mf.mediawiki.WikiTextParser.ParseLevel;
+import org.culturegraph.mf.mediawiki.WikiXmlHandler;
+import org.culturegraph.mf.mediawiki.AstWriter;
 import org.culturegraph.mf.xml.XmlDecoder;
 
 /**

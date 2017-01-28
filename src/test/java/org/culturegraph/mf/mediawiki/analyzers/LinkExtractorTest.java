@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.culturegraph.mf.mediawiki.analyzer;
+package org.culturegraph.mf.mediawiki.analyzers;
 
 import static org.mockito.Mockito.inOrder;
 
@@ -21,9 +21,9 @@ import java.io.IOException;
 
 import org.culturegraph.mf.commons.ResourceUtil;
 import org.culturegraph.mf.framework.StreamReceiver;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
-import org.culturegraph.mf.mediawiki.type.WikiPage;
-import org.culturegraph.mf.monitoring.StreamLogger;
+import org.culturegraph.mf.mediawiki.WikiTextParser;
+import org.culturegraph.mf.mediawiki.WikiTextParser.ParseLevel;
+import org.culturegraph.mf.mediawiki.objects.WikiPage;
 import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.InOrder;
@@ -35,7 +35,7 @@ import org.mockito.junit.MockitoRule;
  * @author Christoph Böhme
  *
  */
-public final class TemplateExtractorTest {
+public final class LinkExtractorTest {
 
 	@Rule
 	public MockitoRule mockitoRule = MockitoJUnit.rule();
@@ -46,12 +46,11 @@ public final class TemplateExtractorTest {
 	@Test
 	public void test() throws IOException {
 		final WikiTextParser wikiPageParser = new WikiTextParser();
-		final TemplateExtractor templateExtractor = new TemplateExtractor();
-		templateExtractor.setNamePattern("Infobox.*");
+		wikiPageParser.setParseLevel(ParseLevel.PARSE);
+		final LinkExtractor linkExtractor = new LinkExtractor();
 
 		wikiPageParser
-				.setReceiver(templateExtractor)
-				.setReceiver(new StreamLogger())
+				.setReceiver(linkExtractor)
 				.setReceiver(receiver);
 
 		final WikiPage page = new WikiPage();
@@ -66,15 +65,13 @@ public final class TemplateExtractorTest {
 
 		final InOrder ordered = inOrder(receiver);
 		ordered.verify(receiver).startRecord("57252");
-		ordered.verify(receiver).startEntity("Infobox_Ort_im_Vereinigten_Königreich");
-		ordered.verify(receiver).literal("_TEMPLATE_", "");
-		ordered.verify(receiver).literal("official_name", "City of Birmingham");
-		ordered.verify(receiver).literal("local_name", "");
-		ordered.verify(receiver).literal("country", "England");
-		ordered.verify(receiver).literal("population", "1036878");
-		ordered.verify(receiver).literal("shire_county", "West Midlands");
-		ordered.verify(receiver).literal("website", "www.birmingham.gov.uk");
-		ordered.verify(receiver).endEntity();
+		ordered.verify(receiver).literal("INTERNAL_LINK", "West Midlands (Metropolitan County)");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Solihull");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Coventry");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Sandwell");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Dudley");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Walsall");
+		ordered.verify(receiver).literal("INTERNAL_LINK", "Wolverhampton");
 		ordered.verify(receiver).endRecord();
 	}
 

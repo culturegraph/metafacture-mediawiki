@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.culturegraph.mf.mediawiki.converter;
+package org.culturegraph.mf.mediawiki;
 
 import java.io.IOException;
 
@@ -25,7 +25,7 @@ import org.culturegraph.mf.framework.annotations.Description;
 import org.culturegraph.mf.framework.annotations.In;
 import org.culturegraph.mf.framework.annotations.Out;
 import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
-import org.culturegraph.mf.mediawiki.type.WikiPage;
+import org.culturegraph.mf.mediawiki.objects.WikiPage;
 import org.sweble.wikitext.engine.CompiledPage;
 import org.sweble.wikitext.engine.Compiler;
 import org.sweble.wikitext.engine.CompilerException;

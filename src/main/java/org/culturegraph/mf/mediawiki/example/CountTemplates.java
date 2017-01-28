@@ -22,10 +22,10 @@ import org.culturegraph.mf.formeta.formatter.FormatterStyle;
 import org.culturegraph.mf.io.ObjectStdoutWriter;
 import org.culturegraph.mf.io.ResourceOpener;
 import org.culturegraph.mf.javaintegration.MapToStream;
-import org.culturegraph.mf.mediawiki.analyzer.TemplateExtractor;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
-import org.culturegraph.mf.mediawiki.converter.xml.WikiXmlHandler;
+import org.culturegraph.mf.mediawiki.analyzers.TemplateExtractor;
+import org.culturegraph.mf.mediawiki.WikiTextParser;
+import org.culturegraph.mf.mediawiki.WikiTextParser.ParseLevel;
+import org.culturegraph.mf.mediawiki.WikiXmlHandler;
 import org.culturegraph.mf.statistics.Histogram;
 import org.culturegraph.mf.xml.XmlDecoder;
 

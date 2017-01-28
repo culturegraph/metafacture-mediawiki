@@ -13,12 +13,12 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.culturegraph.mf.mediawiki.converter;
+package org.culturegraph.mf.mediawiki;
 
 import org.culturegraph.mf.framework.MetafactureException;
 import org.culturegraph.mf.framework.ObjectReceiver;
 import org.culturegraph.mf.framework.helpers.DefaultObjectPipe;
-import org.culturegraph.mf.mediawiki.type.WikiPage;
+import org.culturegraph.mf.mediawiki.objects.WikiPage;
 
 import de.fau.cs.osr.ptk.common.json.JsonConverter;
 

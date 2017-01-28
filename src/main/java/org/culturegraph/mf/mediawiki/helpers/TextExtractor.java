@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.culturegraph.mf.mediawiki.util;
+package org.culturegraph.mf.mediawiki.helpers;
 
 
 import de.fau.cs.osr.ptk.common.ast.AstNode;
@@ -22,7 +22,7 @@ import de.fau.cs.osr.ptk.common.ast.Text;
 /**
  * Concatenates the contents of all text nodes visited
  * by the extractor.
- * 
+ *
  * @author Christoph Böhme
  *
  */

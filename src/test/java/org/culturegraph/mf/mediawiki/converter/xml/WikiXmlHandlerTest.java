@@ -21,7 +21,8 @@ import static org.junit.Assert.assertNull;
 
 import org.culturegraph.mf.io.ResourceOpener;
 import org.culturegraph.mf.javaintegration.ObjectCollector;
-import org.culturegraph.mf.mediawiki.type.WikiPage;
+import org.culturegraph.mf.mediawiki.WikiXmlHandler;
+import org.culturegraph.mf.mediawiki.objects.WikiPage;
 import org.culturegraph.mf.xml.XmlDecoder;
 import org.junit.Test;
 

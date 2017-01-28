@@ -13,29 +13,29 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.culturegraph.mf.mediawiki.analyzer;
+package org.culturegraph.mf.mediawiki.analyzers;
 
 import org.culturegraph.mf.framework.ObjectPipe;
 import org.culturegraph.mf.framework.StreamReceiver;
-import org.culturegraph.mf.mediawiki.converter.WikiTextParser.ParseLevel;
-import org.culturegraph.mf.mediawiki.type.WikiPage;
+import org.culturegraph.mf.mediawiki.WikiTextParser.ParseLevel;
+import org.culturegraph.mf.mediawiki.objects.WikiPage;
 
 /**
  * Modules which process WikiPage objects should implement this interface
- * to inform users about the representations of the wiki page (text, 
- * pre-processed AST, ...) the modules expect to find in the WikiPage 
+ * to inform users about the representations of the wiki page (text,
+ * pre-processed AST, ...) the modules expect to find in the WikiPage
  * objects.
- *  
+ *
  * @see MultiAnalyzer
- * 
+ *
  * @author Christoph Böhme
  *
  */
-public interface Analyzer 
+public interface Analyzer
 		extends ObjectPipe<WikiPage, StreamReceiver> {
-	
+
 	boolean wikiTextOnly();
-	
+
 	ParseLevel requiredParseLevel();
-	
+
 }
