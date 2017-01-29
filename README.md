@@ -4,7 +4,7 @@ Data extraction from MediaWiki pages made easy.
 
 ![Build Status](https://travis-ci.org/culturegraph/metafacture-mediawiki.png?branch=master)
 
-## About Metafacture-Mediawiki 
+## About Metafacture-Mediawiki
 
 Metafacture-Mediawiki is a plugin for [Metafacture](https://github.com/culturegraph/metafacture-core). It provides modules for extracting information from MediaWiki pages such as Wikipedia articles. Currently, modules for extracting links and templates exist. Adding new extraction modules is easy.
 
@@ -35,7 +35,7 @@ Metafacture-Mediawiki is available on [Maven Central](http://search.maven.org/#s
 <dependency>
     <groupId>org.culturegraph</groupId>
     <artifactId>metafacture-mediawiki</artifactId>
-    <version>3.0.0</version>
+    <version>4.0.0</version>
 </dependency>
 ```
 
@@ -45,7 +45,7 @@ Additionally, you need to add the metafacture-core package as a dependency:
 <dependency>
     <groupId>org.culturegraph</groupId>
     <artifactId>metafacture-core</artifactId>
-    <version>3.0.0</version>
+    <version>4.0.0</version>
 </dependency>
 ```
 
